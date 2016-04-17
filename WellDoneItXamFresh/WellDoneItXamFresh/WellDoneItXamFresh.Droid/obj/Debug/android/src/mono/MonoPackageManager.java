@@ -149,6 +149,8 @@ class MonoPackageManager_Resources {
 		"System.Xml.XDocument.dll",
 		"System.Xml.XmlSerializer.dll",
 		"System.ServiceModel.Internals.dll",
+		"FreshMvvm.dll",
+		"FreshIOC.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

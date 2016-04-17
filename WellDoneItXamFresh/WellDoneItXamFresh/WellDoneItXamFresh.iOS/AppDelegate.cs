@@ -25,7 +25,7 @@ namespace WellDoneItXamFresh.iOS
             global::Xamarin.Forms.Forms.Init();
 
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
-            SQLitePCL.CurrentPlatform.Init()
+            SQLitePCL.CurrentPlatform.Init();
 
             LoadApplication(new App());
             

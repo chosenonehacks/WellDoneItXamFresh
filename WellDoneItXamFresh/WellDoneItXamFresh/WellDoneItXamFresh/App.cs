@@ -1,8 +1,9 @@
-﻿using System;
+﻿using FreshMvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using WellDoneIt.Services;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh
@@ -11,20 +12,14 @@ namespace WellDoneItXamFresh
     {
         public App()
         {
+            FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
+
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            var mainPage = new FreshTabbedNavigationContainer();
+
+            mainPage.AddTab<PageModels.InboxPageModel>("Inbox", null);
+            mainPage.AddTab<PageModels.TodayPageModel>("Today", null);
+            MainPage = mainPage;
         }
 
         protected override void OnStart()
