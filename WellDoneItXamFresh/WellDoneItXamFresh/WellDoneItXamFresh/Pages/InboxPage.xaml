@@ -14,7 +14,7 @@
   <StackLayout>
     <!--<Label Text="{Binding ParameterText}" VerticalOptions="Center" HorizontalOptions="Center" />
     <Button Text="Go Back" Command="{Binding NavigationBackCommand}"/>-->
-    <ListView ItemsSource="{Binding WellDoneItList}" SelectedItem="{Binding SelectedTask}" >
+    <ListView ItemsSource="{Binding WellDoneItList}" SelectedItem="{Binding SelectedTask}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
       <ListView.Behaviors>
         <!--<local:ListViewSelectedItemBehavior Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->
         <!--<local:EventToCommandBehavior EventName="ItemSelected" Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->

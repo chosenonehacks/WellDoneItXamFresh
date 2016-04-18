@@ -3,6 +3,7 @@ using MvvmHelpers;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,12 +62,29 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        public bool IsBusy { get; set; }
+
         private async Task ReloadTasks()
         {
-            //TODO: Add busy indicator ON
-            var tasks = await _wellDoneItMobileService.GetWellDoneItTasks();
-            WellDoneItList.ReplaceRange(tasks.Where(d => d.DateUtc == DateTime.Today));
-            //TODO: Add busy indicator OFF
+            if (IsBusy)
+                return;
+
+            try
+            {
+
+                IsBusy = true;
+                var tasks = await _wellDoneItMobileService.GetWellDoneItTasks();
+                WellDoneItList.ReplaceRange(tasks.Where(d => d.DateUtc == DateTime.Today));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("OH NO!" + ex);
+                await CoreMethods.DisplayAlert("Alert", "Unable to sync tasks, you may be offline", "ok");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         public override void Init(object initData)
