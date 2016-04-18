@@ -10,7 +10,7 @@ namespace WellDoneIt.Services
 
         Task<IEnumerable<WellDoneItTask>>GetWellDoneItTasks();
 
-        Task AddWellDoneItTask();
+        Task AddWellDoneItTask(WellDoneItTask task);
 
         Task UpdateWellDoneItTask(WellDoneItTask task);
 

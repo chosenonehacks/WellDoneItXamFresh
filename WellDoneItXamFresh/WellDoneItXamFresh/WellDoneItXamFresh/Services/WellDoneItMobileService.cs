@@ -54,18 +54,11 @@ namespace WellDoneIt.Services
             return await _wellDoneItTaskSyncTable.Where(t => !t.Complete).OrderBy(c => c.DateUtc).ToEnumerableAsync();
         }
 
-        public async Task AddWellDoneItTask()
+        public async Task AddWellDoneItTask(WellDoneItTask task)
         {
-            await Initialize();
+            await Initialize();                       
 
-            var wellDoneItTask = new WellDoneItTask
-            {
-                DateUtc = DateTime.UtcNow,
-                Title = "Test title",
-                Complete = false
-            };
-
-            await _wellDoneItTaskSyncTable.InsertAsync(wellDoneItTask);
+            await _wellDoneItTaskSyncTable.InsertAsync(task);
 
             await SyncTasks();
         }

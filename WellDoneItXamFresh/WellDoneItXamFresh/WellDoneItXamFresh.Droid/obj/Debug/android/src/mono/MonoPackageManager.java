@@ -81,6 +81,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"WellDoneItXamFresh.Droid.dll",
 		"FormsViewGroup.dll",
+		"FreshEssentials.dll",
+		"FreshEssentials.Droid.dll",
 		"Microsoft.WindowsAzure.Mobile.dll",
 		"Microsoft.WindowsAzure.Mobile.Ext.dll",
 		"Microsoft.WindowsAzure.Mobile.SQLiteStore.dll",
@@ -151,6 +153,7 @@ class MonoPackageManager_Resources {
 		"System.ServiceModel.Internals.dll",
 		"FreshMvvm.dll",
 		"FreshIOC.dll",
+		"MvvmHelpers.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

@@ -1,6 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WellDoneItXamFresh.Pages.InboxPage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
+             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="WellDone It Inbox">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add"
+                 Icon="plus.png"
+                 Command="{Binding AddNewTaskCommand}"
+                 Order="Primary"/>
+  </ContentPage.ToolbarItems>
+
+  <StackLayout>
+    <!--<Label Text="{Binding ParameterText}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Button Text="Go Back" Command="{Binding NavigationBackCommand}"/>-->
+    <ListView ItemsSource="{Binding WellDoneItList}" SelectedItem="{Binding SelectedTask}" >
+      <ListView.Behaviors>
+        <!--<local:ListViewSelectedItemBehavior Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->
+        <!--<local:EventToCommandBehavior EventName="ItemSelected" Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->
+      </ListView.Behaviors>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <Grid Padding="16,12">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+
+              <!--<Image Grid.Column="1" Source="check.png" Aspect="AspectFit" fe:TappedGestureAttached.Command="{Binding ImageTappedCommnad}" HorizontalOptions="End" />-->
+          
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
 </ContentPage>

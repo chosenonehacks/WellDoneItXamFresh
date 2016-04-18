@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WellDoneIt.Services;
+using WellDoneItXamFresh.PageModels;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh
@@ -14,12 +15,23 @@ namespace WellDoneItXamFresh
         {
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
-            // The root page of your application
-            var mainPage = new FreshTabbedNavigationContainer();
+            
+            //var mainPage = new FreshTabbedNavigationContainer();
 
-            mainPage.AddTab<PageModels.InboxPageModel>("Inbox", null);
-            mainPage.AddTab<PageModels.TodayPageModel>("Today", null);
-            MainPage = mainPage;
+            //mainPage.AddTab<InboxPageModel>("Inbox", null);
+            //mainPage.AddTab<TodayPageModel>("Today", null);
+            //MainPage = mainPage;
+
+            var masterDetailNav = new FreshMasterDetailNavigationContainer();
+            masterDetailNav.Init("Menu", "Menu.png");
+            masterDetailNav.AddPage<InboxPageModel>("Inbox", null);
+            masterDetailNav.AddPage<TodayPageModel>("Today", null);
+            MainPage = masterDetailNav;
+
+            //var tabbedNavigation = new FreshTabbedNavigationContainer();
+            //tabbedNavigation.AddTab<ContactListPageModel>("Contacts", "contacts.png", null);
+            //tabbedNavigation.AddTab<QuoteListPageModel>("Quotes", "document.png", null);
+            //MainPage = tabbedNavigation;
         }
 
         protected override void OnStart()
