@@ -10,6 +10,8 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Plugin.Settings.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\SQLitePCL.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\SQLitePCL.Ext.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\System.Net.Http.Extensions.dll
@@ -33,6 +35,8 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Plugin.Settings.xml
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Plugin.Settings.Abstractions.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Xamarin.Forms.Core.xml
@@ -51,5 +55,6 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable\menu.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\R.cs.flag
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\uploadflags.txt
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.dll.mdb

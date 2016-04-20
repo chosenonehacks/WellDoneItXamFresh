@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WellDoneIt.Model;
 using WellDoneIt.Services;
+using WellDoneItXamFresh.Helpers;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh.PageModels
@@ -72,6 +73,13 @@ namespace WellDoneItXamFresh.PageModels
 
             try
             {
+                if (!Settings.IsLoggedIn)
+                {
+                    await _wellDoneItMobileService.Initialize();
+                    var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
+                    if (user == null)
+                        return;
+                }
 
                 IsBusy = true;
                 var tasks = await _wellDoneItMobileService.GetWellDoneItTasks();
@@ -88,10 +96,16 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
-        
+        //if(!Settings.IsLoggedIn)
+        //        {
+        //            await azureService.Initialize();
+        //var user = await DependencyService.Get<IAuthentication>().LoginAsync(azureService.MobileService, MobileServiceAuthenticationProvider.MicrosoftAccount);
+        //            if(user == null)
+        //                return;
+        //        }
 
 
-        public async override void Init(object initData)
+    public async override void Init(object initData)
         {
             
             

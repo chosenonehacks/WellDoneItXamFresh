@@ -8,6 +8,8 @@ using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using WellDoneIt.Model;
+using WellDoneItXamFresh.Services;
+using WellDoneItXamFresh.Helpers;
 
 namespace WellDoneIt.Services
 {
@@ -26,10 +28,21 @@ namespace WellDoneIt.Services
         {
             if (_isInitialized)
                 return;
-            //Create our client
-            MobileService = new MobileServiceClient("http://welldoneitmobileapp.azurewebsites.net");
+            
+            
 
-            const string path = "syncstore.db";
+            var handler = new AuthHandler();
+            //Create our client
+            MobileService = new MobileServiceClient("http://welldoneitmobileapp.azurewebsites.net", handler);
+            handler.Client = MobileService;
+
+            if (!string.IsNullOrWhiteSpace(Settings.AuthToken) && !string.IsNullOrWhiteSpace(Settings.UserId))
+            {
+                MobileService.CurrentUser = new MobileServiceUser(Settings.UserId);
+                MobileService.CurrentUser.MobileServiceAuthenticationToken = Settings.AuthToken;
+            }
+
+            const string path = "localsyncstore.db";
 
             //setup our local sqlite store and intialize our table
             var store = new MobileServiceSQLiteStore(path);
@@ -38,8 +51,6 @@ namespace WellDoneIt.Services
 
             //Get our sync table that will call out to azure
             _wellDoneItTaskSyncTable = MobileService.GetSyncTable<WellDoneItTask>();
-
-            //_wellDoneItTaskTable = MobileService.GetTable<WellDoneItTask>();
 
             _isInitialized = true;
         }

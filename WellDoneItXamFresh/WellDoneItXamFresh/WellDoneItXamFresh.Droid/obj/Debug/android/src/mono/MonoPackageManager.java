@@ -87,6 +87,8 @@ class MonoPackageManager_Resources {
 		"Microsoft.WindowsAzure.Mobile.Ext.dll",
 		"Microsoft.WindowsAzure.Mobile.SQLiteStore.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Settings.Abstractions.dll",
+		"Plugin.Settings.dll",
 		"SQLitePCL.dll",
 		"SQLitePCL.Ext.dll",
 		"System.Net.Http.Extensions.dll",

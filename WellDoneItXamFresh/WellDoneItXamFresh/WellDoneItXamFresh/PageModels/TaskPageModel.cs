@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WellDoneIt.Model;
 using WellDoneIt.Services;
+//using WellDoneItXamFresh.Helpers;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh.PageModels
@@ -61,16 +62,28 @@ namespace WellDoneItXamFresh.PageModels
 
         private async Task TaskOperationAsync(WellDoneItTask Task)
         {
-            if(isNewTask)
+            if (!WellDoneItXamFresh.Helpers.Settings.IsLoggedIn)
             {
-                await _wellDoneItMobileService.AddWellDoneItTask(Task);
-                await CoreMethods.PopPageModel(Task);
+                await _wellDoneItMobileService.Initialize();
+                var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
+                if (user == null)
+                    return;
             }
-            else
-            {
-                await _wellDoneItMobileService.UpdateWellDoneItTask(Task);
+
+                if (isNewTask)
+                {
+
+                    await _wellDoneItMobileService.AddWellDoneItTask(Task);
+
+                }
+                else
+                {
+                    await _wellDoneItMobileService.UpdateWellDoneItTask(Task);
+
+                }
+
                 await CoreMethods.PopPageModel(Task);
-            }
+            
         }
 
         // Methods are automatically wired up to page

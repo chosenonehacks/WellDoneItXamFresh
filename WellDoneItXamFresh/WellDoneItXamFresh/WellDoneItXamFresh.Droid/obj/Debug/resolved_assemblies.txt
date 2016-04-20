@@ -8,6 +8,8 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Mono.Android.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\mscorlib.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Newtonsoft.Json.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Plugin.Settings.Abstractions.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Plugin.Settings.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\SQLitePCL.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\SQLitePCL.Ext.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\System.Core.dll

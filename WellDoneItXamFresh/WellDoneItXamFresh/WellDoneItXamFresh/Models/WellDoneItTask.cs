@@ -36,5 +36,8 @@ namespace WellDoneIt.Model
 
         [Newtonsoft.Json.JsonIgnore]
         public string TimeDisplay { get { return DateUtc.ToLocalTime().ToString("t"); } }
+
+        [Newtonsoft.Json.JsonProperty("userId")]
+        public string UserId { get; set; }
     }
 }

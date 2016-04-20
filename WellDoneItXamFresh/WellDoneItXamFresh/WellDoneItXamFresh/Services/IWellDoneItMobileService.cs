@@ -15,5 +15,7 @@ namespace WellDoneIt.Services
         Task UpdateWellDoneItTask(WellDoneItTask task);
 
         Task SyncTasks();
+
+        Microsoft.WindowsAzure.MobileServices.MobileServiceClient MobileService { get; set; }
     }
 }
