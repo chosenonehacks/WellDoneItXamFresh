@@ -96,16 +96,8 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
-        //if(!Settings.IsLoggedIn)
-        //        {
-        //            await azureService.Initialize();
-        //var user = await DependencyService.Get<IAuthentication>().LoginAsync(azureService.MobileService, MobileServiceAuthenticationProvider.MicrosoftAccount);
-        //            if(user == null)
-        //                return;
-        //        }
 
-
-    public async override void Init(object initData)
+        public override void Init(object initData)
         {
             
             

@@ -14,9 +14,8 @@ using WellDoneItXamFresh.Helpers;
 namespace WellDoneIt.Services
 {
     public class WellDoneItMobileService : IWellDoneItMobileService
-    {
+    {  
         
-        private MobileServiceCollection<WellDoneItTask, WellDoneItTask> _items;
         
         private IMobileServiceSyncTable<WellDoneItTask> _wellDoneItTaskSyncTable;
 

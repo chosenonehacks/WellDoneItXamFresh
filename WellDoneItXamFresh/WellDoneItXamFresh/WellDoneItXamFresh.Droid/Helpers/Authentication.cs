@@ -39,7 +39,7 @@ namespace WellDoneItXamFresh.Droid.Helpers
                 if((int)global::Android.OS.Build.VERSION.SdkInt >= 21)
                     global::Android.Webkit.CookieManager.Instance.RemoveAllCookies(null);
             }
-            catch(Exception ex)
+            catch(Exception )
             {
             }
         }

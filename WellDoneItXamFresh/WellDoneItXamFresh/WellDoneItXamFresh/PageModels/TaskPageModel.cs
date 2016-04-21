@@ -2,6 +2,7 @@
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,15 +61,23 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        public bool IsBusy { get; set; }
+
         private async Task TaskOperationAsync(WellDoneItTask Task)
         {
-            if (!WellDoneItXamFresh.Helpers.Settings.IsLoggedIn)
+            if (IsBusy)
+                return;
+            try
             {
-                await _wellDoneItMobileService.Initialize();
-                var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
-                if (user == null)
-                    return;
-            }
+                if (!WellDoneItXamFresh.Helpers.Settings.IsLoggedIn)
+                {
+                    await _wellDoneItMobileService.Initialize();
+                    var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
+                    if (user == null)
+                        return;
+                }
+
+                IsBusy = true;
 
                 if (isNewTask)
                 {
@@ -83,6 +92,16 @@ namespace WellDoneItXamFresh.PageModels
                 }
 
                 await CoreMethods.PopPageModel(Task);
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("OH NO!" + ex);
+                await CoreMethods.DisplayAlert("Alert", "Unable to sync tasks, you may be offline", "ok");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
             
         }
 
