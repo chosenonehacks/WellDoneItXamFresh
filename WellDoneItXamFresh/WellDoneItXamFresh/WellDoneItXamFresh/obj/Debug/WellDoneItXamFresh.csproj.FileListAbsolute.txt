@@ -26,7 +26,6 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.csproj.App.config
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.csprojResolveAssemblyReference.cache
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.TaskPage.xaml.g.cs
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.InboxPage.xaml.g.cs
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.TodayPage.xaml.g.cs

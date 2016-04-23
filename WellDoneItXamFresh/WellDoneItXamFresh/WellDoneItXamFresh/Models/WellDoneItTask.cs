@@ -22,13 +22,13 @@ namespace WellDoneIt.Model
         [Microsoft.WindowsAzure.MobileServices.Version]
         public string AzureVersion { get; set; }
 
-        [JsonProperty(PropertyName = "DateUtc")]
+        [JsonProperty(PropertyName = "dateUtc")]
         public DateTime DateUtc { get; set; }
 
-        [JsonProperty(PropertyName = "Title")]
+        [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
-        [JsonProperty(PropertyName = "Complete")]
+        [JsonProperty(PropertyName = "complete")]
         public bool Complete { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]

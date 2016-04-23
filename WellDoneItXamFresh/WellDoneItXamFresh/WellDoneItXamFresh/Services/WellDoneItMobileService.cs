@@ -32,7 +32,7 @@ namespace WellDoneIt.Services
 
             var handler = new AuthHandler();
             //Create our client
-            MobileService = new MobileServiceClient("http://welldoneitmobileapp.azurewebsites.net", handler);
+            MobileService = new MobileServiceClient("https://welldoneitmobileapp.azurewebsites.net", handler);
             handler.Client = MobileService;
 
             if (!string.IsNullOrWhiteSpace(Settings.AuthToken) && !string.IsNullOrWhiteSpace(Settings.UserId))
@@ -41,7 +41,7 @@ namespace WellDoneIt.Services
                 MobileService.CurrentUser.MobileServiceAuthenticationToken = Settings.AuthToken;
             }
 
-            const string path = "localsyncstore.db";
+            const string path = "localsyncstore1.db";
 
             //setup our local sqlite store and intialize our table
             var store = new MobileServiceSQLiteStore(path);
