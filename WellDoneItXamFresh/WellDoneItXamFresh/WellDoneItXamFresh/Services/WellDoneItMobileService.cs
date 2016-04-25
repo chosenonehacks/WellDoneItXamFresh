@@ -41,7 +41,7 @@ namespace WellDoneIt.Services
                 MobileService.CurrentUser.MobileServiceAuthenticationToken = Settings.AuthToken;
             }
 
-            const string path = "localsyncstore1.db";
+            const string path = "localsyncstore2.db";
 
             //setup our local sqlite store and intialize our table
             var store = new MobileServiceSQLiteStore(path);

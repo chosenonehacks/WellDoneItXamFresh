@@ -63,6 +63,10 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        Command loadTasksCommand;
+        public Command LoadTasksCommand =>
+            loadTasksCommand ?? (loadTasksCommand = new Command(async () => await ReloadTasks()));
+
         public bool IsBusy { get; set; }
 
         private async Task ReloadTasks()

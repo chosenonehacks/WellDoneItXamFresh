@@ -44,6 +44,10 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        Command loadTasksCommand;
+        public Command LoadTasksCommand =>
+            loadTasksCommand ?? (loadTasksCommand = new Command(async () => await ReloadTasks()));
+
         public Command<WellDoneItTask> TaskSelected
         {
             get
@@ -75,9 +79,11 @@ namespace WellDoneItXamFresh.PageModels
             {
                 if (!Settings.IsLoggedIn)
                 {
-                    await _wellDoneItMobileService.Initialize();
-                    var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
-                    if (user == null)
+                    await CoreMethods.PushPageModel<LoginPageModel>(null, false);
+                    //await _wellDoneItMobileService.Initialize();
+                    //var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
+                    //if (_wellDoneItMobileService.MobileService.CurrentUser == null)
+                    
                         return;
                 }
 
@@ -100,13 +106,12 @@ namespace WellDoneItXamFresh.PageModels
         public override void Init(object initData)
         {
             
-            
+
         }
 
         // Methods are automatically wired up to page
         protected async override void ViewIsAppearing(object sender, System.EventArgs e)
-        {
-            //CoreMethods.DisplayAlert ("Page is appearing", "", "Ok");
+        {            
             await ReloadTasks();
 
             base.ViewIsAppearing(sender, e);

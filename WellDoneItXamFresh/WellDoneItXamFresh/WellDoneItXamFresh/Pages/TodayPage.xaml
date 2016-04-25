@@ -10,13 +10,14 @@
   </ContentPage.ToolbarItems>
 
   <StackLayout>
-    <!--<Label Text="{Binding ParameterText}" VerticalOptions="Center" HorizontalOptions="Center" />
-    <Button Text="Go Back" Command="{Binding NavigationBackCommand}"/>-->
-    <ListView ItemsSource="{Binding WellDoneItList}" SelectedItem="{Binding SelectedTask}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
-      <ListView.Behaviors>
-        <!--<local:ListViewSelectedItemBehavior Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->
-        <!--<local:EventToCommandBehavior EventName="ItemSelected" Command="{Binding CompleteTaskCommand}" Converter="{StaticResource SelectedItemConverter}" />-->
-      </ListView.Behaviors>
+    <ListView
+      ItemsSource="{Binding WellDoneItList}"
+      SelectedItem="{Binding SelectedTask}"
+      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+      IsPullToRefreshEnabled="True"
+      RefreshCommand="{Binding LoadTasksCommand}"
+      SeparatorVisibility="None">
+
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell >
@@ -27,8 +28,7 @@
               </Grid.ColumnDefinitions>
 
               <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-
-              <!--<Image Grid.Column="1" Source="check.png" Aspect="AspectFit" fe:TappedGestureAttached.Command="{Binding ImageTappedCommnad}" HorizontalOptions="End" />-->
+              <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
 
             </Grid>
           </ViewCell>
