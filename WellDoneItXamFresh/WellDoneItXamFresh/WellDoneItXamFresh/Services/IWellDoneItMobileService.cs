@@ -8,6 +8,8 @@ namespace WellDoneIt.Services
     {
         Task Initialize();
 
+        Task ReInitialize();
+
         Task<IEnumerable<WellDoneItTask>>GetWellDoneItTasks();
 
         Task AddWellDoneItTask(WellDoneItTask task);

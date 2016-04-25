@@ -43,6 +43,12 @@ namespace WellDoneItXamFresh.Droid.Helpers
             {
             }
         }
+
+        public async Task LogoutAsync(MobileServiceClient client)
+        {
+            ClearCookies();
+            await client.LogoutAsync();
+        }
     }
 }
 

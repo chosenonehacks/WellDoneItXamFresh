@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WellDoneItXamFresh.Pages.LoginPage" Title="Login"
-             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials">
+             xmlns:converters="clr-namespace:WellDoneItXamFresh.Converters;assembly=WellDoneItXamFresh"
+             x:Class="WellDoneItXamFresh.Pages.LoginPage" Title="Login"  >
 
   <ContentPage.Resources>
     <ResourceDictionary>
-      <fe:InverseBooleanConverter x:Key="InverseConverter" />
+      <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
   <Grid>
@@ -21,10 +21,10 @@
     <Button Text="Google" Command="{Binding LoginCommand}" CommandParameter="google"/>
   </StackLayout>  
       
-  <StackLayout Grid.Row="1" Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseConverter}}">
+  <StackLayout Grid.Row="1" Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseBooleanConverter}}">
     <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />
     <Button Text="Go back to your tasks" Command="{Binding CloseLoginCommand}"/>
-    <Button Text="Logout" Command="{Binding CloseLoginCommand}"/>
+    <Button Text="Logout" Command="{Binding LogoutCommand}"/>
   </StackLayout>
   
   

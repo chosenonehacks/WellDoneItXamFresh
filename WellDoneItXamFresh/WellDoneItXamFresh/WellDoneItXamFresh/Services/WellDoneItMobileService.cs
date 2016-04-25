@@ -32,7 +32,7 @@ namespace WellDoneIt.Services
 
             var handler = new AuthHandler();
             //Create our client
-            MobileService = new MobileServiceClient("https://welldoneitmobileapp.azurewebsites.net", handler);
+            MobileService = new MobileServiceClient("https://welldoneitmobileapp.azurewebsites.net", handler); 
             handler.Client = MobileService;
 
             if (!string.IsNullOrWhiteSpace(Settings.AuthToken) && !string.IsNullOrWhiteSpace(Settings.UserId))
@@ -41,7 +41,7 @@ namespace WellDoneIt.Services
                 MobileService.CurrentUser.MobileServiceAuthenticationToken = Settings.AuthToken;
             }
 
-            const string path = "localsyncstore2.db";
+            const string path = "localsyncstore4.db";
 
             //setup our local sqlite store and intialize our table
             var store = new MobileServiceSQLiteStore(path);
@@ -54,7 +54,20 @@ namespace WellDoneIt.Services
             _isInitialized = true;
         }
 
-        
+        public async Task ReInitialize()
+        {
+            if (!_isInitialized)
+                return;
+            var token = new System.Threading.CancellationToken();
+            await _wellDoneItTaskSyncTable.PurgeAsync<WellDoneItTask>("allTasks", _wellDoneItTaskSyncTable.CreateQuery(), token);
+
+            _isInitialized = false;
+
+            await this.Initialize();
+        }
+
+
+
         public async Task<IEnumerable<WellDoneItTask>> GetWellDoneItTasks()
         {
             await Initialize();

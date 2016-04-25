@@ -80,12 +80,11 @@ namespace WellDoneItXamFresh.PageModels
                 if (!Settings.IsLoggedIn)
                 {
                     await CoreMethods.PushPageModel<LoginPageModel>(null, false);
-                    //await _wellDoneItMobileService.Initialize();
-                    //var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
-                    //if (_wellDoneItMobileService.MobileService.CurrentUser == null)
                     
                         return;
                 }
+
+                await _wellDoneItMobileService.Initialize();
 
                 IsBusy = true;
                 var tasks = await _wellDoneItMobileService.GetWellDoneItTasks();

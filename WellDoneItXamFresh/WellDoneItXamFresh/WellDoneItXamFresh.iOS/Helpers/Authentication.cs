@@ -56,6 +56,12 @@ namespace WellDoneItXamFresh.iOS.Helpers
                 store.DeleteCookie(c);
             }
         }
+
+        public async Task LogoutAsync(MobileServiceClient client)
+        {
+            ClearCookies();
+            await client.LogoutAsync();
+        }
     }
 }
 

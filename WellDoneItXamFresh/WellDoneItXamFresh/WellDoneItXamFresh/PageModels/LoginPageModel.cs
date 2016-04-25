@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WellDoneIt.Services;
+using WellDoneItXamFresh.Helpers;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh.PageModels
@@ -38,6 +39,26 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        public Command LogoutCommand
+        {
+            get
+            {
+                return new Command(async (loginMethod) => {
+                    await LogoutAsync();
+                });
+            }
+        }
+
+        private async Task LogoutAsync()
+        {
+            await DependencyService.Get<IAuthentication>().LogoutAsync(_wellDoneItMobileService.MobileService);
+
+            IsLogedInPanelVisible = true;
+            Settings.UserId = String.Empty;
+
+            _wellDoneItMobileService.ReInitialize();
+        }
+
         public Command CloseLoginCommand
         {
             get
@@ -49,10 +70,9 @@ namespace WellDoneItXamFresh.PageModels
         }
 
         private async Task LoginAsync(string loginMethod)
-        {
-            
+        {            
 
-             MobileServiceUser user = null;
+            MobileServiceUser user = null;
 
             await _wellDoneItMobileService.Initialize();
 
