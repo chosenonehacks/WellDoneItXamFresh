@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WellDoneItXamFresh.Pages.ContextTaskPage" Title="{Binding PageTitle}">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add"
+                 Icon="plus.png"
+                 Command="{Binding AddNewTaskCommand}"
+                 Order="Primary"/>
+  </ContentPage.ToolbarItems>
+
+  <StackLayout>
+    <ListView
+      ItemsSource="{Binding WellDoneItList}"
+      SelectedItem="{Binding SelectedTask}"
+      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+      IsPullToRefreshEnabled="True"
+      RefreshCommand="{Binding LoadTasksCommand}"
+      SeparatorVisibility="None">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <Grid Padding="16,12">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+              <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

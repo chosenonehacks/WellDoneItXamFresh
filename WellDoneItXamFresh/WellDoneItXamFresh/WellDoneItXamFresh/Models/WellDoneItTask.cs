@@ -11,11 +11,6 @@ namespace WellDoneIt.Model
     [ImplementPropertyChanged]
     public class WellDoneItTask
     {
-        public WellDoneItTask()
-        {
-
-        } 
-
         [JsonProperty("id")]
         public string Id { get; set; }
 
@@ -39,5 +34,8 @@ namespace WellDoneIt.Model
 
         [Newtonsoft.Json.JsonProperty("userId")]
         public string UserId { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("context")]
+        public string Context { get; set; }
     }
 }

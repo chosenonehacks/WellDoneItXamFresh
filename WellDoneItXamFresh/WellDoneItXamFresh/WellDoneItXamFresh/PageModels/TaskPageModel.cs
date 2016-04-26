@@ -2,12 +2,15 @@
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MvvmHelpers;
 using WellDoneIt.Model;
 using WellDoneIt.Services;
+using WellDoneItXamFresh.Helpers;
 //using WellDoneItXamFresh.Helpers;
 using Xamarin.Forms;
 
@@ -23,32 +26,110 @@ namespace WellDoneItXamFresh.PageModels
         {
             if (wellDoneItMobileService == null) throw new ArgumentNullException("wellDoneItMobileService");
             _wellDoneItMobileService = wellDoneItMobileService;
-
-            this.WhenAny(HandleContactChanged, o => o.WellDoneItTask);
         }
+
+        //public List<WellDoneItContext> WellDoneItContextList { get; set; } = new List<WellDoneItContext>();
+        public List<WellDoneItContext> WellDoneItContextList { get; set; }
+        
+        public WellDoneItContext SelectedContext { get; set; }
+
 
         public WellDoneItTask WellDoneItTask { get; set; }
-
-        void HandleContactChanged(string propertyName)
+        
+        public override async void Init(object initData)
         {
-            //handle the property changed, nice
-        }
+            ReloadContexts();
 
-
-        public override void Init(object initData)
-        {
             if (initData != null)
             {
                 WellDoneItTask = initData as WellDoneItTask;
+                SelectedContext = WellDoneItContextList.FirstOrDefault(c => c.Name == WellDoneItTask.Context);
+                
             }
             else
             {
                 WellDoneItTask = new WellDoneItTask();
+                WellDoneItTask.Title = "Name your task";
                 WellDoneItTask.DateUtc = DateTime.Today;
+                //WellDoneItTask.Context = WellDoneItContextList.FirstOrDefault().Name;
+                //SelectedContext.Name = WellDoneItTask.Context;
 
                 isNewTask = true;
             }
         }
+
+        private void ReloadContexts()
+        {
+            WellDoneItContextList = new List<WellDoneItContext>
+            {
+                new WellDoneItContext
+                {
+                    Name = "@Home"
+                },
+                new WellDoneItContext
+                {
+                    Name = "@Work"
+                },
+                new WellDoneItContext
+                {
+                    Name = "@Shoping"
+                },
+                new WellDoneItContext
+                {
+                    Name = "@Someday"
+                },
+            };
+        }
+
+        #region Contexts loaded from Azure - currently droped idea
+        //private async wellDoneItTask<IEnumerable<WellDoneItContext>> ReloadContexts()
+        //{
+        //    if (IsBusy)
+        //        return null;
+
+        //    try
+        //    {
+
+        //        if (!Settings.IsLoggedIn)
+        //        {
+        //            await CoreMethods.PushPageModel<LoginPageModel>(null, false);
+
+        //            return null;
+        //        }
+
+        //        await _wellDoneItMobileService.Initialize();
+
+        //        IsBusy = true;
+        //        var contexts = await _wellDoneItMobileService.GetWellDoneItContexts();
+
+        //        //First time logining - seeds initial contextes
+        //        if (!contexts.Any())
+        //        {
+        //            await InsertInitContexts();
+        //            contexts = await _wellDoneItMobileService.GetWellDoneItContexts();
+        //        }
+
+        //        return contexts;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine("OH NO!" + ex);
+        //        await CoreMethods.DisplayAlert("Alert", "Unable to sync tasks, you may be offline", "ok");
+        //    }
+        //    finally
+        //    {
+        //        IsBusy = false;
+        //    }
+        //    return null;
+        //}
+
+
+        //private async Task InsertInitContexts()
+        //{
+        //    await _wellDoneItMobileService.InsertInitContexts();
+        //}
+
+        #endregion
 
         public Command SaveCommand
         {
@@ -63,35 +144,30 @@ namespace WellDoneItXamFresh.PageModels
 
         public bool IsBusy { get; set; }
 
-        private async Task TaskOperationAsync(WellDoneItTask Task)
+        private async Task TaskOperationAsync(WellDoneItTask wellDoneItTask)
         {
             if (IsBusy)
                 return;
             try
             {
-                if (!WellDoneItXamFresh.Helpers.Settings.IsLoggedIn)
-                {
-                    await _wellDoneItMobileService.Initialize();
-                    var user = await DependencyService.Get<IAuthentication>().LoginAsync(_wellDoneItMobileService.MobileService, Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Facebook);
-                    if (user == null)
-                        return;
-                }
 
                 IsBusy = true;
+                if(SelectedContext != null)
+                wellDoneItTask.Context = SelectedContext.Name;
 
                 if (isNewTask)
                 {
 
-                    await _wellDoneItMobileService.AddWellDoneItTask(Task);
+                    await _wellDoneItMobileService.AddWellDoneItTask(wellDoneItTask);
 
                 }
                 else
                 {
-                    await _wellDoneItMobileService.UpdateWellDoneItTask(Task);
+                    await _wellDoneItMobileService.UpdateWellDoneItTask(wellDoneItTask);
 
                 }
 
-                await CoreMethods.PopPageModel(Task);
+                await CoreMethods.PopPageModel(wellDoneItTask);
             }
             catch(Exception ex)
             {
@@ -106,9 +182,8 @@ namespace WellDoneItXamFresh.PageModels
         }
 
         // Methods are automatically wired up to page
-        protected override void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override async void ViewIsAppearing(object sender, System.EventArgs e)
         {
-            
             base.ViewIsAppearing(sender, e);
         }
 
@@ -123,5 +198,6 @@ namespace WellDoneItXamFresh.PageModels
         {
 
         }
+        
     }
 }

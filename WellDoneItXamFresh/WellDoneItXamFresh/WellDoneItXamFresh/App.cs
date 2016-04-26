@@ -26,6 +26,7 @@ namespace WellDoneItXamFresh
             masterDetailNav.Init("Menu", "Menu.png");
             masterDetailNav.AddPage<InboxPageModel>("Inbox", null);
             masterDetailNav.AddPage<TodayPageModel>("Today", null);
+            masterDetailNav.AddPage<ContextListPageModel>("Contexts", null);
             masterDetailNav.AddPage<SettingsPageModel>("Settings", null);
             MainPage = masterDetailNav;
 

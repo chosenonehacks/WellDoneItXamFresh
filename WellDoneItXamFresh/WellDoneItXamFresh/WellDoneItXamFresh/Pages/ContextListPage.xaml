@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts">
+  <ContentPage.ToolbarItems>
+    <!--<ToolbarItem Text="Add"
+                 Icon="plus.png"
+                 Command="{Binding AddNewContextCommand}"
+                 Order="Primary"/>-->
+  </ContentPage.ToolbarItems>
+
+  <StackLayout>
+    <ListView
+      ItemsSource="{Binding WellDoneItContextList}"
+      SelectedItem="{Binding SelectedContext}"
+      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+      IsPullToRefreshEnabled="False"
+      RefreshCommand="{Binding LoadContextsCommand}"
+      SeparatorVisibility="None">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <Grid Padding="16,12">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Name}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

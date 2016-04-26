@@ -10,11 +10,19 @@ namespace WellDoneIt.Services
 
         Task ReInitialize();
 
-        Task<IEnumerable<WellDoneItTask>>GetWellDoneItTasks();
+        Task<IEnumerable<WellDoneItTask>>GetWellDoneItTasks(); 
+
+        Task<IEnumerable<WellDoneItContext>> GetWellDoneItContexts(); 
 
         Task AddWellDoneItTask(WellDoneItTask task);
 
-        Task UpdateWellDoneItTask(WellDoneItTask task);
+        Task AddWellDoneItContext(WellDoneItContext context);
+
+        Task InsertInitContexts();
+
+        Task UpdateWellDoneItTask(WellDoneItTask task); 
+
+        Task UpdateWellDoneItContext(WellDoneItContext task); 
 
         Task SyncTasks();
 

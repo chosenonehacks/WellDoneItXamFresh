@@ -33,5 +33,9 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.SettingsPage.xaml.g.cs
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.pdb
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.ContextListPage.xaml.g.cs
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.ContextTaskPage.xaml.g.cs
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.ContextPage.xaml.g.cs
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.csprojResolveAssemblyReference.cache
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\bin\Debug\WellDoneItXamFresh.dll.mdb

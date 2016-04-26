@@ -1,11 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WellDoneItXamFresh.Pages.TaskPage">
+             x:Class="WellDoneItXamFresh.Pages.TaskPage"
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
+             Title="Task details">
   <StackLayout Orientation="Vertical">
     <Entry Text="{Binding WellDoneItTask.Title}"/>
     <Switch IsToggled="{Binding WellDoneItTask.Complete}" />
     <DatePicker Date="{Binding WellDoneItTask.DateUtc}" />
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Context: "/>
+      <!--<Picker Items="{Binding WellDoneItContextList}" SelectedIndex="{Binding SelectedContext}"></Picker>-->
+      <fe:BindablePicker ItemsSource="{Binding WellDoneItContextList}" SelectedItem="{Binding SelectedContext}" DisplayProperty="Name" Title="Select Context"></fe:BindablePicker>
+      <!--<Entry Text="{Binding WellDoneItTask.Context}" MinimumWidthRequest="10"/>-->
+    </StackLayout>
     <BoxView HeightRequest="30"></BoxView>
     <Button Text="Save" Command="{Binding SaveCommand}"></Button>
   </StackLayout>  
