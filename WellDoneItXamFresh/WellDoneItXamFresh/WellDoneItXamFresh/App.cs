@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WellDoneIt.Services;
+using WellDoneItXamFresh.Helpers;
 using WellDoneItXamFresh.PageModels;
 using Xamarin.Forms;
 
@@ -15,19 +16,21 @@ namespace WellDoneItXamFresh
         {
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
-            
+
             //var mainPage = new FreshTabbedNavigationContainer();
 
-            //mainPage.AddTab<InboxPageModel>("Inbox", null);
-            //mainPage.AddTab<TodayPageModel>("Today", null);
+            //mainPage.AddTab<InboxPageModel>("Inbox", "plus.png");
+            //mainPage.AddTab<TodayPageModel>("Today", "plus.png");
+            //mainPage.AddTab<ContextListPageModel>("Contexts", null);
+            //mainPage.AddTab<SettingsPageModel>("Settings", null);
             //MainPage = mainPage;
 
-            var masterDetailNav = new FreshMasterDetailNavigationContainer();
+            var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
             masterDetailNav.Init("Menu", "Menu.png");
-            masterDetailNav.AddPage<InboxPageModel>("Inbox", null);
-            masterDetailNav.AddPage<TodayPageModel>("Today", null);
-            masterDetailNav.AddPage<ContextListPageModel>("Contexts", null);
-            masterDetailNav.AddPage<SettingsPageModel>("Settings", null);
+            masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "check.png");
+            masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "check.png");
+            masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "check.png");
+            masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", null);
             MainPage = masterDetailNav;
 
             //var tabbedNavigation = new FreshTabbedNavigationContainer();

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
              x:Class="WellDoneItXamFresh.Pages.TodayPage" Title="Today's tasks">
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Add"
@@ -8,16 +9,16 @@
                  Command="{Binding AddNewTaskCommand}"
                  Order="Primary"/>
   </ContentPage.ToolbarItems>
-
-  <StackLayout>
-    <ListView
-      ItemsSource="{Binding WellDoneItList}"
-      SelectedItem="{Binding SelectedTask}"
+  <ContentPage.Content>
+  <OnPlatform x:TypeArguments="View">
+  <!--<StackLayout>
+    <ListView 
+      ItemsSource="{Binding WellDoneItList}" 
+      SelectedItem="{Binding SelectedTask}" 
       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-      IsPullToRefreshEnabled="True"
-      RefreshCommand="{Binding LoadTasksCommand}"
-      SeparatorVisibility="None">
-
+      IsPullToRefreshEnabled="True"            
+      RefreshCommand="{Binding LoadTasksCommand}">
+      
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell >
@@ -26,14 +27,79 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
               </Grid.ColumnDefinitions>
-
-              <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-              <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-
+              
+                <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+              
             </Grid>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </StackLayout>
+  </StackLayout>-->
+
+  <OnPlatform.Android>
+    <AbsoluteLayout>
+      <AbsoluteLayout.Children>
+        <ListView
+      ItemsSource="{Binding WellDoneItList}"
+      SelectedItem="{Binding SelectedTask}"
+      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+      IsPullToRefreshEnabled="True"
+      RefreshCommand="{Binding LoadTasksCommand}">
+
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell >
+                <Grid Padding="16,12">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                  <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+        <views:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#547799" ColorPressed="#172839" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+      </AbsoluteLayout.Children>
+    </AbsoluteLayout>
+    </OnPlatform.Android>
+
+      <OnPlatform.iOS>
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView
+          ItemsSource="{Binding WellDoneItList}"
+          SelectedItem="{Binding SelectedTask}"
+          IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+          IsPullToRefreshEnabled="True"
+          RefreshCommand="{Binding LoadTasksCommand}">
+
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell >
+                    <Grid Padding="16,12">
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                      </Grid.ColumnDefinitions>
+
+                      <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                      <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+
+                    </Grid>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+      </OnPlatform.iOS>
+  </OnPlatform>
+  </ContentPage.Content>
 </ContentPage>

@@ -55,5 +55,12 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable\menu.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\R.cs.flag
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\uploadflags.txt
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Refractored.FloatingActionButton.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Refractored.FloatingActionButton.pdb
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Refractored.FloatingActionButton.xml
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable\fab_add.png
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Refractored.FloatingActionButton.dll.mdb
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.dll.mdb

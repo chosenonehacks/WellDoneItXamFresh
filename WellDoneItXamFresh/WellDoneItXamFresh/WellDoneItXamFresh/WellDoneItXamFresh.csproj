@@ -38,6 +38,8 @@
     <Compile Include="App.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Helpers\ThemedMasterDetailNavigationContainer.cs" />
+    <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\WellDoneItContext.cs" />
     <Compile Include="Models\WellDoneItTask.cs" />
     <Compile Include="PageModels\ContextListPageModel.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Services\IAuthentication.cs" />
     <Compile Include="Services\IWellDoneItMobileService.cs" />
     <Compile Include="Services\WellDoneItMobileService.cs" />
+    <Compile Include="Views\FloatingActionButtonView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -10,6 +10,7 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Newtonsoft.Json.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Plugin.Settings.Abstractions.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Plugin.Settings.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Refractored.FloatingActionButton.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\SQLitePCL.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\SQLitePCL.Ext.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\System.Core.dll
@@ -25,6 +26,7 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Android.Support.v7.CardView.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Forms.Core.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Forms.Platform.Android.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\assemblies\Xamarin.Forms.Platform.dll
