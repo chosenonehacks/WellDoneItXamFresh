@@ -20,6 +20,7 @@ namespace WellDoneItXamFresh.PageModels
     class TaskPageModel : FreshBasePageModel
     {
         private readonly IWellDoneItMobileService _wellDoneItMobileService;
+        
         private bool isNewTask { get; set; }
 
         public TaskPageModel(IWellDoneItMobileService wellDoneItMobileService)
@@ -30,12 +31,21 @@ namespace WellDoneItXamFresh.PageModels
 
         //public List<WellDoneItContext> WellDoneItContextList { get; set; } = new List<WellDoneItContext>();
         public List<WellDoneItContext> WellDoneItContextList { get; set; }
-        
-        public WellDoneItContext SelectedContext { get; set; }
 
+        private WellDoneItContext _selectedContext;
+        public WellDoneItContext SelectedContext
+        {
+            get { return _selectedContext; }
+            set { _selectedContext = value; }
+        }
 
-        public WellDoneItTask WellDoneItTask { get; set; }
-        
+        private WellDoneItTask _wellDoneItTask;
+        public WellDoneItTask WellDoneItTask
+        {
+            get { return _wellDoneItTask; }
+            set { _wellDoneItTask = value; }
+        }
+
         public override async void Init(object initData)
         {
             ReloadContexts();

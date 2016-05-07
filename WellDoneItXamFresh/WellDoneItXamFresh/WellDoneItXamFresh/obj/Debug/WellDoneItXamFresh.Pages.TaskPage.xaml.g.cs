@@ -17,8 +17,12 @@ namespace WellDoneItXamFresh.Pages {
     public partial class TaskPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::XLabs.Forms.Controls.ExtendedPicker myPicker;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(TaskPage));
+            myPicker = this.FindByName<global::XLabs.Forms.Controls.ExtendedPicker>("myPicker");
         }
     }
 }
