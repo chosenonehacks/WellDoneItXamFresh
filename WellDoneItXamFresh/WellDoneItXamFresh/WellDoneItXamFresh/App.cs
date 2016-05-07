@@ -26,11 +26,11 @@ namespace WellDoneItXamFresh
             //MainPage = mainPage;
 
             var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
-            masterDetailNav.Init("Menu", "Menu.png");
-            masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "check.png");
-            masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "check.png");
-            masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "check.png");
-            masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", null);
+            masterDetailNav.Init("Menu", "menu.png");
+            masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
+            masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
+            masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
+            masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
             MainPage = masterDetailNav;
 
             //var tabbedNavigation = new FreshTabbedNavigationContainer();
