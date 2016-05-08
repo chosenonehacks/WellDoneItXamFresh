@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             
+             x:Name="inboxPage"
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
-             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="WellDone It Inbox" >
+             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="Inbox" >
 
   <ContentPage.ToolbarItems>
                  <ToolbarItem Text="Add" 
@@ -20,60 +20,70 @@
     <OnPlatform x:TypeArguments="View">
   
   <OnPlatform.Android>
-    <AbsoluteLayout>
-      <AbsoluteLayout.Children>
-        <ListView
-      ItemsSource="{Binding WellDoneItList}"
-      SelectedItem="{Binding SelectedTask}"
-      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-      IsPullToRefreshEnabled="True"
-      RefreshCommand="{Binding LoadTasksCommand}">
-
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <ViewCell >
-                <Grid Padding="16,12">
-                  <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                  </Grid.ColumnDefinitions>
-
-                  <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-                  <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-
-                </Grid>
-              </ViewCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-        <views:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#547799" ColorPressed="#172839" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
-      </AbsoluteLayout.Children>
-    </AbsoluteLayout>
-    </OnPlatform.Android>
-
-      <OnPlatform.iOS>
-        <AbsoluteLayout>
+    
+      <AbsoluteLayout>
           <AbsoluteLayout.Children>
-            <ListView
+            <ListView RowHeight="60" HasUnevenRows="True" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
           ItemsSource="{Binding WellDoneItList}"
           SelectedItem="{Binding SelectedTask}"
           IsRefreshing="{Binding IsBusy, Mode=OneWay}"
           IsPullToRefreshEnabled="True"
           RefreshCommand="{Binding LoadTasksCommand}">
-
-              <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                  <ViewCell >
-                    <Grid Padding="16,12">
-                      <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                      </Grid.ColumnDefinitions>
+                  <ViewCell StyleId="disclosure" Height="60">
+                    <ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference inboxPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>
+                    <ContentView Padding="10,0" >
+                      <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <ContentView Padding="10,0,0,0">
+                          <StackLayout Spacing="0">
+                            
+                              <Label Text="{Binding Title}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" TextColor="Silver" />
+                            
+                              <Label Text="{Binding DateDisplay}" HeightRequest="20" FontSize="Micro"  TextColor="Silver" />
+                              <Label Text="{Binding Context}" HeightRequest="20" FontSize="Micro" TextColor="Silver" />
+                            
+                          </StackLayout>
+                        </ContentView>
+                      </StackLayout>
+                    </ContentView>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+            <views:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#547799" ColorPressed="#172839" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+    </OnPlatform.Android>
 
-                      <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-                      <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-
-                    </Grid>
+      <OnPlatform.iOS>
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView RowHeight="60" HasUnevenRows="True"
+          ItemsSource="{Binding WellDoneItList}"
+          SelectedItem="{Binding SelectedTask}"
+          IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+          IsPullToRefreshEnabled="True"
+          RefreshCommand="{Binding LoadTasksCommand}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell StyleId="disclosure" Height="60">
+                    <ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference inboxPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>
+                      <ContentView Padding="10,0" >
+                        <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                          <ContentView Padding="10,0,0,0">
+                            <StackLayout Spacing="0">
+                                <Label Text="{Binding Title}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding DateDisplay}" HeightRequest="20" FontSize="Micro"  />
+                                <Label Text="{Binding Context}" HeightRequest="20" FontSize="Micro" TextColor="Silver" />
+                            </StackLayout>
+                          </ContentView>
+                        </StackLayout>
+                      </ContentView>
                   </ViewCell>
                 </DataTemplate>
               </ListView.ItemTemplate>

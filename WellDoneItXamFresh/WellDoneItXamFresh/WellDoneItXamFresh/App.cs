@@ -17,12 +17,13 @@ namespace WellDoneItXamFresh
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
 
-            var mainPage = new FreshTabbedNavigationContainer();
+            var mainPage = new ThemedTabbedPage();
 
             mainPage.AddTab<InboxPageModel>("Inbox", "inbox.png");
             mainPage.AddTab<TodayPageModel>("Today", "today.png");
             mainPage.AddTab<ContextListPageModel>("Contexts", "context.png");
-            //mainPage.AddTab<SettingsPageModel>("Settings", null);
+            
+
             MainPage = mainPage;
 
             //var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();

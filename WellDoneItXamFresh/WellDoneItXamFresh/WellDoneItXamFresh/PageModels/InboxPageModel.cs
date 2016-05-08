@@ -48,6 +48,23 @@ namespace WellDoneItXamFresh.PageModels
         public Command LoadTasksCommand =>
             loadTasksCommand ?? (loadTasksCommand = new Command(async () => await ReloadTasks()));
 
+        public Command<WellDoneItTask> CompleteCommand
+        {
+            get
+            {
+                return new Command<WellDoneItTask>(async (task) => {
+                    await CompleteTask(task);
+                });
+            }
+        }
+
+        private async Task CompleteTask(WellDoneItTask task)
+        {
+            task.Complete = true;
+            await _wellDoneItMobileService.UpdateWellDoneItTask(task);
+            await ReloadTasks();
+        }
+
         public Command SettingsCommand
         {
             get

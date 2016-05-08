@@ -39,6 +39,7 @@
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Helpers\ThemedMasterDetailNavigationContainer.cs" />
+    <Compile Include="Helpers\ThemedTabbedPage.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\WellDoneItContext.cs" />
     <Compile Include="Models\WellDoneItTask.cs" />
