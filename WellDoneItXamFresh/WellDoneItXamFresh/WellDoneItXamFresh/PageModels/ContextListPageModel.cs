@@ -68,6 +68,16 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        public Command SettingsCommand
+        {
+            get
+            {
+                return new Command(async () => {
+                    await CoreMethods.PushPageModel<SettingsPageModel>();
+                });
+            }
+        }
+
         #region Loading contexts from Azure - temporay abondoned idea
         //public bool IsBusy { get; set; }
 
@@ -115,7 +125,7 @@ namespace WellDoneItXamFresh.PageModels
         //{
         //    await _wellDoneItMobileService.InsertInitContexts();
         //}
-#endregion
+        #endregion
 
         public override void Init(object initData)
         {

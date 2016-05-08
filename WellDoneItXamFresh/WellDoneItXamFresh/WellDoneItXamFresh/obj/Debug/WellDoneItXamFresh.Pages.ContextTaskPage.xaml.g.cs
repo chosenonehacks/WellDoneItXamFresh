@@ -17,8 +17,12 @@ namespace WellDoneItXamFresh.Pages {
     public partial class ContextTaskPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WellDoneItXamFresh.Views.FloatingActionButtonView fab;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ContextTaskPage));
+            fab = this.FindByName<global::WellDoneItXamFresh.Views.FloatingActionButtonView>("fab");
         }
     }
 }

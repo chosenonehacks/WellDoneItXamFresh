@@ -20,18 +20,33 @@ namespace WellDoneItXamFresh.Helpers
 
         protected override void CreateMenuPage(string menuPageTitle, string menuIcon = null)
         {
+            //var stackLayout = new StackLayout();
+            
+
             var listview = new ListView();
             var _menuPage = new ContentPage();
             _menuPage.Title = menuPageTitle;
-            _menuPage.BackgroundColor = Color.FromHex("#c8c8c8");
+            _menuPage.BackgroundColor = Color.FromHex("#FFFFFF");
+
+            listview.Header = new StackLayout {
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                Padding = new Thickness(5, 10, 5, 0),
+				BackgroundColor = Color.FromHex("#512DA8"),
+				Children ={
+     //               new Label { Text = "Header" },
+					//new Label { Text = "Subhead", FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) }
+                    
+                }
+            };
 
             listview.ItemsSource = pageIcons;
 
             var cell = new DataTemplate(typeof(ImageCell));
             cell.SetValue(TextCell.TextColorProperty, Color.Black);
+            //cell.SetValue(ImageCell.);
             cell.SetBinding(ImageCell.TextProperty, "Title");
             cell.SetBinding(ImageCell.ImageSourceProperty, "IconSource");
-
+            
 
             listview.ItemTemplate = cell;
             listview.ItemSelected += (sender, args) =>
@@ -49,14 +64,14 @@ namespace WellDoneItXamFresh.Helpers
 
             if (!string.IsNullOrEmpty(menuIcon))
                 navPage.Icon = menuIcon;
-
+            
             Master = navPage;
 
         }
 
         protected override Page CreateContainerPage(Page page)
         {
-            var navigation = new NavigationPage(page) {BarTextColor = Color.Black};
+            var navigation = new NavigationPage(page) {BackgroundColor = Color.FromHex("#512DA8"), BarTextColor = Color.White };
 
             return navigation;
         }

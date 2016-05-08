@@ -17,21 +17,21 @@ namespace WellDoneItXamFresh
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
 
-            //var mainPage = new FreshTabbedNavigationContainer();
+            var mainPage = new FreshTabbedNavigationContainer();
 
-            //mainPage.AddTab<InboxPageModel>("Inbox", "plus.png");
-            //mainPage.AddTab<TodayPageModel>("Today", "plus.png");
-            //mainPage.AddTab<ContextListPageModel>("Contexts", null);
+            mainPage.AddTab<InboxPageModel>("Inbox", "inbox.png");
+            mainPage.AddTab<TodayPageModel>("Today", "today.png");
+            mainPage.AddTab<ContextListPageModel>("Contexts", "context.png");
             //mainPage.AddTab<SettingsPageModel>("Settings", null);
-            //MainPage = mainPage;
+            MainPage = mainPage;
 
-            var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
-            masterDetailNav.Init("Menu", "menu.png");
-            masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
-            masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
-            masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
-            masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
-            MainPage = masterDetailNav;
+            //var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
+            //masterDetailNav.Init("Menu", "menu.png");
+            //masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
+            //masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
+            //masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
+            //masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
+            //MainPage = masterDetailNav;
 
             //var tabbedNavigation = new FreshTabbedNavigationContainer();
             //tabbedNavigation.AddTab<ContactListPageModel>("Contacts", "contacts.png", null);

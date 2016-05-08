@@ -1,46 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
              
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
-             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="WellDone It Inbox">
+             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="WellDone It Inbox" >
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Add"
+                 <ToolbarItem Text="Add" 
                  Icon="plus.png"
                  Command="{Binding AddNewTaskCommand}"
                  Order="Primary"/>
+                 <ToolbarItem Text="Settings"
+                 Icon="settings.png"
+                 Command="{Binding SettingsCommand}"
+                 Order="Primary"/>
+    
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <OnPlatform x:TypeArguments="View">
-  <!--<StackLayout>
-    <ListView 
-      ItemsSource="{Binding WellDoneItList}" 
-      SelectedItem="{Binding SelectedTask}" 
-      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-      IsPullToRefreshEnabled="True"            
-      RefreshCommand="{Binding LoadTasksCommand}">
-      
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell >
-            <Grid Padding="16,12">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-              </Grid.ColumnDefinitions>
-              
-                <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-                <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-              
-            </Grid>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>-->
-
+  
   <OnPlatform.Android>
     <AbsoluteLayout>
       <AbsoluteLayout.Children>

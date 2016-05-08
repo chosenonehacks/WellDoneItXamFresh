@@ -48,6 +48,16 @@ namespace WellDoneItXamFresh.PageModels
         public Command LoadTasksCommand =>
             loadTasksCommand ?? (loadTasksCommand = new Command(async () => await ReloadTasks()));
 
+        public Command SettingsCommand
+        {
+            get
+            {
+                return new Command(async () => {
+                    await CoreMethods.PushPageModel<SettingsPageModel>();
+                });
+            }
+        }
+
         public Command<WellDoneItTask> TaskSelected
         {
             get

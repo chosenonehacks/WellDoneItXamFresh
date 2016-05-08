@@ -39,6 +39,16 @@ namespace WellDoneItXamFresh.PageModels
             }
         }
 
+        public Command SettingsCommand
+        {
+            get
+            {
+                return new Command(async () => {
+                    await CoreMethods.PushPageModel<SettingsPageModel>();
+                });
+            }
+        }
+
         public Command SaveCommand
         {
             get

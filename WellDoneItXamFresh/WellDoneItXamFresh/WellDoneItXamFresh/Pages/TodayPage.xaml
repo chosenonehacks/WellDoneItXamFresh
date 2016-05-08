@@ -8,35 +8,13 @@
                  Icon="plus.png"
                  Command="{Binding AddNewTaskCommand}"
                  Order="Primary"/>
+    <ToolbarItem Text="Settings"
+                 Icon="settings.png"
+                 Command="{Binding SettingsCommand}"
+                 Order="Primary"/>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
   <OnPlatform x:TypeArguments="View">
-  <!--<StackLayout>
-    <ListView 
-      ItemsSource="{Binding WellDoneItList}" 
-      SelectedItem="{Binding SelectedTask}" 
-      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-      IsPullToRefreshEnabled="True"            
-      RefreshCommand="{Binding LoadTasksCommand}">
-      
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell >
-            <Grid Padding="16,12">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-              </Grid.ColumnDefinitions>
-              
-                <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-                <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource SubtitleTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-              
-            </Grid>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>-->
 
   <OnPlatform.Android>
     <AbsoluteLayout>

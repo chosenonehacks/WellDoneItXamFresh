@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts">
   <ContentPage.ToolbarItems>
-    <!--<ToolbarItem Text="Add"
-                 Icon="plus.png"
-                 Command="{Binding AddNewContextCommand}"
-                 Order="Primary"/>-->
+    <ToolbarItem Text="Settings"
+                 Icon="settings.png"
+                 Command="{Binding SettingsCommand}"
+                 Order="Primary"/>
   </ContentPage.ToolbarItems>
 
   <StackLayout>
