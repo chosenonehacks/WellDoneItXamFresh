@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
-             x:Class="WellDoneItXamFresh.Pages.ContextTaskPage" Title="{Binding PageTitle}">
+             x:Name="contexTaskPage"
+             x:Class="WellDoneItXamFresh.Pages.ContextTaskPage" Title="{Binding PageTitle}" BackgroundColor="White">
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Add"
                  Icon="plus.png"
@@ -15,7 +16,7 @@
   </ContentPage.ToolbarItems>
 
   <ContentPage.Content>
-    <OnPlatform x:TypeArguments="View">
+    <!--<OnPlatform x:TypeArguments="View">
 
       <OnPlatform.Android>
         <AbsoluteLayout>
@@ -79,34 +80,86 @@
           </AbsoluteLayout.Children>
         </AbsoluteLayout>
       </OnPlatform.iOS>
+    </OnPlatform>-->
+    <OnPlatform x:TypeArguments="View">
+   
+
+      <OnPlatform.Android>
+
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView RowHeight="60" HasUnevenRows="True" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" CachingStrategy="RetainElement"
+          ItemsSource="{Binding WellDoneItList}"
+          SelectedItem="{Binding SelectedTask}"
+          IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+          IsPullToRefreshEnabled="True"
+          RefreshCommand="{Binding LoadTasksCommand}">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell Height="70">
+                    <ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference contexTaskPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>
+                    <!--cardview zamiast content view znalesc sposob na cardview-->
+                    <views:CardContentView CornderRadius="3" >
+                      <!--<ContentView Padding="10,0" >-->
+
+                      <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <ContentView Padding="10,0,10,0">
+                          <StackLayout Spacing="0">
+                            <Label Text="{Binding Title}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" TextColor="Black" />
+                            <Label Text="{Binding DateDisplay}" HeightRequest="20" FontSize="Micro"  TextColor="Black" />
+                            <Label Text="{Binding Context}" HeightRequest="20" FontSize="Micro" TextColor="Silver" />
+                          </StackLayout>
+                        </ContentView>
+                      </StackLayout>
+                      <!--</ContentView>-->
+                    </views:CardContentView>
+
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+            <views:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#FF5722" ColorPressed="#E64A19" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+      </OnPlatform.Android>
+
+      
+
+      <OnPlatform.iOS>
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView RowHeight="60" HasUnevenRows="True"
+          ItemsSource="{Binding WellDoneItList}"
+          SelectedItem="{Binding SelectedTask}"
+          IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+          IsPullToRefreshEnabled="True"
+          RefreshCommand="{Binding LoadTasksCommand}">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell StyleId="disclosure" Height="60">
+                    <ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference contexTaskPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>
+                    <ContentView Padding="10,0" >
+                      <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <ContentView Padding="10,0,0,0">
+                          <StackLayout Spacing="0">
+                            <Label Text="{Binding Title}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding DateDisplay}" HeightRequest="20" FontSize="Micro"  />
+                            <Label Text="{Binding Context}" HeightRequest="20" FontSize="Micro" TextColor="Silver" />
+                          </StackLayout>
+                        </ContentView>
+                      </StackLayout>
+                    </ContentView>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+      </OnPlatform.iOS>
     </OnPlatform>
   </ContentPage.Content>
-
-  <!--<StackLayout>
-    <ListView
-      ItemsSource="{Binding WellDoneItList}"
-      SelectedItem="{Binding SelectedTask}"
-      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-      IsPullToRefreshEnabled="True"
-      RefreshCommand="{Binding LoadTasksCommand}"
-      SeparatorVisibility="None">
-
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell >
-            <Grid Padding="16,12">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-              </Grid.ColumnDefinitions>
-
-              <Label Text="{Binding Title}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
-              <Label Grid.Column="1" Text="{Binding DateDisplay}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
-
-            </Grid>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>-->
 </ContentPage>

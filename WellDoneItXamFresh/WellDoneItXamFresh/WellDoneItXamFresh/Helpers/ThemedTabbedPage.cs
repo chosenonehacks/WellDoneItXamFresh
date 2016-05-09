@@ -12,7 +12,7 @@ namespace WellDoneItXamFresh.Helpers
     {
         protected override Page CreateContainerPage(Page page)
         {
-            var navigation = new NavigationPage(page) { BackgroundColor = Color.Gray, BarTextColor = Color.White, BarBackgroundColor = Color.FromHex("547799")};
+            var navigation = new NavigationPage(page) { BackgroundColor = Color.Gray, BarTextColor = Color.White, BarBackgroundColor = Color.FromHex("#009688") };
 
             return navigation;
         }

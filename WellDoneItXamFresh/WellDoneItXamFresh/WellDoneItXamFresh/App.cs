@@ -17,27 +17,27 @@ namespace WellDoneItXamFresh
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
 
-            var mainPage = new ThemedTabbedPage();
+            if (Device.OS == TargetPlatform.iOS)
+            {
+                var mainPage = new FreshTabbedNavigationContainer();
 
-            mainPage.AddTab<InboxPageModel>("Inbox", "inbox.png");
-            mainPage.AddTab<TodayPageModel>("Today", "today.png");
-            mainPage.AddTab<ContextListPageModel>("Contexts", "context.png");
-            
+                mainPage.AddTab<InboxPageModel>("Inbox", "inbox.png");
+                mainPage.AddTab<TodayPageModel>("Today", "today.png");
+                mainPage.AddTab<ContextListPageModel>("Contexts", "context.png");
+                MainPage = mainPage;
+            }
+            else
+            {
+                var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
 
-            MainPage = mainPage;
+                masterDetailNav.Init("Menu", "menu.png");
+                masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
+                masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
+                masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
+                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
+                MainPage = masterDetailNav;
+            }
 
-            //var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
-            //masterDetailNav.Init("Menu", "menu.png");
-            //masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
-            //masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
-            //masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
-            //masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
-            //MainPage = masterDetailNav;
-
-            //var tabbedNavigation = new FreshTabbedNavigationContainer();
-            //tabbedNavigation.AddTab<ContactListPageModel>("Contacts", "contacts.png", null);
-            //tabbedNavigation.AddTab<QuoteListPageModel>("Quotes", "document.png", null);
-            //MainPage = tabbedNavigation;
         }
 
         protected override void OnStart()

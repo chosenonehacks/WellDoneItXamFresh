@@ -46,7 +46,7 @@ namespace WellDoneItXamFresh.PageModels
             set { _wellDoneItTask = value; }
         }
 
-        public override async void Init(object initData)
+        public override void Init(object initData)
         {
             ReloadContexts();
 
@@ -192,7 +192,7 @@ namespace WellDoneItXamFresh.PageModels
         }
 
         // Methods are automatically wired up to page
-        protected override async void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override void ViewIsAppearing(object sender, System.EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
         }

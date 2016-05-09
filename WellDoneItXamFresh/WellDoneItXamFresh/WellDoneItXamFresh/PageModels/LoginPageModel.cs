@@ -56,7 +56,7 @@ namespace WellDoneItXamFresh.PageModels
             IsLogedInPanelVisible = true;
             Settings.UserId = String.Empty;
 
-            _wellDoneItMobileService.ReInitialize();
+            await _wellDoneItMobileService.ReInitialize();
         }
 
         public Command CloseLoginCommand
@@ -106,7 +106,7 @@ namespace WellDoneItXamFresh.PageModels
 
         }
         
-        protected async override void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override void ViewIsAppearing(object sender, System.EventArgs e)
         {
             IsLogedInPanelVisible = true;
 

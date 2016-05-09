@@ -1,3 +1,7 @@
+WellDoneItXamFresh.CardViewRenderer, WellDoneItXamFresh.Droid;md55e06a5422e514696f3b6475ecdda9394.CardViewRenderer
+WellDoneItXamFresh.CardViewRenderer, WellDoneItXamFresh.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55e06a5422e514696f3b6475ecdda9394.CardViewRenderer
+WellDoneItXamFresh.CardViewRenderer;md55e06a5422e514696f3b6475ecdda9394.CardViewRenderer
+welldoneitxamfresh.CardViewRenderer;md55e06a5422e514696f3b6475ecdda9394.CardViewRenderer
 WellDoneItXamFresh.Droid.MainActivity, WellDoneItXamFresh.Droid;md50f00d6f8ee60c2d42639f207638f9857.MainActivity
 WellDoneItXamFresh.Droid.MainActivity, WellDoneItXamFresh.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50f00d6f8ee60c2d42639f207638f9857.MainActivity
 WellDoneItXamFresh.Droid.MainActivity;md50f00d6f8ee60c2d42639f207638f9857.MainActivity

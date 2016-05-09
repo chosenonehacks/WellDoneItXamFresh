@@ -1,8 +1,6 @@
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.dll.config
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.pdb
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.apk
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid-Signed.apk
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\FormsViewGroup.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
@@ -46,7 +44,6 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.csprojResolveAssemblyReference.cache
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.dll
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.pdb
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\android\bin\WellDoneItXamFresh.Droid.apk
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable\icon.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable-hdpi\icon.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\drawable-xhdpi\icon.png
@@ -76,9 +73,9 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\XLabs.Platform.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\XLabs.Platform.Droid.xml
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\XLabs.Serialization.xml
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\layout\toolbar.xml
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\values\colors.xml
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\values\styles.xml
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\res\values-v21\styles.xml
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\welldoneit.welldoneit.apk
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\welldoneit.welldoneit-Signed.apk
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\android\bin\welldoneit.welldoneit.apk
+C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\obj\Debug\WellDoneItXamFresh.Droid.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.Droid\bin\Debug\WellDoneItXamFresh.Droid.dll.mdb

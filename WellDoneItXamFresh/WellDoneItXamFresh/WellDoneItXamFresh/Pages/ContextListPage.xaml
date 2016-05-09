@@ -1,15 +1,99 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts">
+             xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
+             x:Name="contexListPage"
+             x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts" BackgroundColor="White">
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Settings"
                  Icon="settings.png"
                  Command="{Binding SettingsCommand}"
                  Order="Primary"/>
   </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    
+    <OnPlatform x:TypeArguments="View">
 
-  <StackLayout>
+
+      <OnPlatform.Android>
+
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView RowHeight="60" HasUnevenRows="True" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" CachingStrategy="RetainElement"
+              ItemsSource="{Binding WellDoneItContextList}"
+              SelectedItem="{Binding SelectedContext}"
+              IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+              IsPullToRefreshEnabled="False"
+              RefreshCommand="{Binding LoadContextsCommand}"
+              SeparatorVisibility="None">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell Height="70">
+                    <!--<ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference contexListPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>-->
+                    <!--cardview zamiast content view znalesc sposob na cardview-->
+                    <views:CardContentView CornderRadius="3" >
+                      <!--<ContentView Padding="10,0" >-->
+
+                      <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <ContentView Padding="10,0,10,0">
+                          <StackLayout Spacing="0">
+                            <Label Text="{Binding Name}" HeightRequest="30" VerticalTextAlignment="End" LineBreakMode="TailTruncation" TextColor="Black" />
+                            <!--<Label Text="{Binding Name}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>-->
+                          </StackLayout>
+                        </ContentView>
+                      </StackLayout>
+                      <!--</ContentView>-->
+                    </views:CardContentView>
+
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+            <!--<views:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#FF5722" ColorPressed="#E64A19" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />-->
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+      </OnPlatform.Android>
+
+
+
+      <OnPlatform.iOS>
+        <AbsoluteLayout>
+          <AbsoluteLayout.Children>
+            <ListView
+                ItemsSource="{Binding WellDoneItContextList}"
+                SelectedItem="{Binding SelectedContext}"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                IsPullToRefreshEnabled="False"
+                RefreshCommand="{Binding LoadContextsCommand}"
+                SeparatorVisibility="None">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell Height="60">
+                    <!--<ViewCell.ContextActions>
+                      <MenuItem Text="Done it" Command="{Binding Source={x:Reference contexListPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
+                    </ViewCell.ContextActions>-->
+                    <ContentView Padding="10,0" >
+                      <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <ContentView Padding="10,0,0,0">
+                          <StackLayout Spacing="0">
+                            <Label Text="{Binding Name}" FontSize="16" Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                          </StackLayout>
+                        </ContentView>
+                      </StackLayout>
+                    </ContentView>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+          </AbsoluteLayout.Children>
+        </AbsoluteLayout>
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Content>
+
+  <!--<StackLayout>
     <ListView
       ItemsSource="{Binding WellDoneItContextList}"
       SelectedItem="{Binding SelectedContext}"
@@ -34,5 +118,5 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </StackLayout>
+  </StackLayout>-->
 </ContentPage>

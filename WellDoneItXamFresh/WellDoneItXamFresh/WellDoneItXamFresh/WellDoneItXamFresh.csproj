@@ -80,6 +80,7 @@
     <Compile Include="Services\IAuthentication.cs" />
     <Compile Include="Services\IWellDoneItMobileService.cs" />
     <Compile Include="Services\WellDoneItMobileService.cs" />
+    <Compile Include="Views\CardContentView.cs" />
     <Compile Include="Views\FloatingActionButtonView.cs" />
   </ItemGroup>
   <ItemGroup>

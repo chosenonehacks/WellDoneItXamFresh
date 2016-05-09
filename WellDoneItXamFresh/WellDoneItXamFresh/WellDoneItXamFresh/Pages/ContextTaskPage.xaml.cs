@@ -17,7 +17,7 @@ namespace WellDoneItXamFresh.Pages
 
             if (Device.OS == TargetPlatform.Android)
             {
-                ToolbarItems.RemoveAt(0);
+                ToolbarItems.Clear();
 
                 fab.Clicked = AndroidAddButtonClicked;
             }

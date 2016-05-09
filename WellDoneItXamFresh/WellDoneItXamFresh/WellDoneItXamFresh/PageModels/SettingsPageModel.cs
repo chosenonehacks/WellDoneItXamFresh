@@ -51,7 +51,7 @@ namespace WellDoneItXamFresh.PageModels
 
         }
 
-        protected async override void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override void ViewIsAppearing(object sender, System.EventArgs e)
         {
             if (Settings.IsLoggedIn)
                 MobileServiceLoggedUserName = Settings.UserId;

@@ -10,17 +10,23 @@ using Xamarin.Forms.Platform.Android;
 
 namespace WellDoneItXamFresh.Droid
 {
-    [Activity(Label = "WellDoneItXamFresh", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Well Done It", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
-            FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+
+            
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+
+            //removes Application Icon from toolbar
+            this.ActionBar.SetIcon(Android.Resource.Color.Transparent);
+
+            
 
             LoadApplication(new App());
         }
