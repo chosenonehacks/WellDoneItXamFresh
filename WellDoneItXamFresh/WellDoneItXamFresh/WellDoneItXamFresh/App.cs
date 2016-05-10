@@ -21,9 +21,9 @@ namespace WellDoneItXamFresh
             {
                 var mainPage = new FreshTabbedNavigationContainer();
 
-                mainPage.AddTab<InboxPageModel>("Inbox", "inbox.png");
-                mainPage.AddTab<TodayPageModel>("Today", "today.png");
-                mainPage.AddTab<ContextListPageModel>("Contexts", "context.png");
+                mainPage.AddTab<InboxPageModel>("Inbox", "inboxm.png");
+                mainPage.AddTab<TodayPageModel>("Today", "eventm.png");
+                mainPage.AddTab<ContextListPageModel>("Contexts", "contextm.png");
                 MainPage = mainPage;
             }
             else
@@ -31,10 +31,10 @@ namespace WellDoneItXamFresh
                 var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
 
                 masterDetailNav.Init("Menu", "menu.png");
-                masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inbox.png");
-                masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "today.png");
-                masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "context.png");
-                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settings.png");
+                masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inboxm.png");
+                masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "todaym.png");
+                masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "contextm.png");
+                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
                 MainPage = masterDetailNav;
             }
 
