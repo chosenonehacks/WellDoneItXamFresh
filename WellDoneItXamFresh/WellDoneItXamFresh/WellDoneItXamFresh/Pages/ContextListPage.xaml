@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
              x:Name="contexListPage"
-             x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts" BackgroundColor="White">
+             x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts" >
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Settings"
                  Icon="settings.png"

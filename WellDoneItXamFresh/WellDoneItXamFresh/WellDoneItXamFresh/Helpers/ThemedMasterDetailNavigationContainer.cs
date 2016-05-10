@@ -32,7 +32,7 @@ namespace WellDoneItXamFresh.Helpers
                 HeightRequest = 100,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 Padding = new Thickness(5, 10, 5, 0),
-				BackgroundColor = Color.FromHex("#009688"),
+				BackgroundColor = Color.FromHex("#2196F3"),
 				Children ={
      //               new Label { Text = "Header" },
 					//new Label { Text = "Subhead", FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) }
@@ -73,7 +73,7 @@ namespace WellDoneItXamFresh.Helpers
         protected override Page CreateContainerPage(Page page)
         {
             //var navigation = new NavigationPage(page) {BackgroundColor = Color.FromHex("#512DA8"), BarTextColor = Color.White };
-            var navigation = new NavigationPage(page) { BackgroundColor = Color.FromHex("#009688"), BarTextColor = Color.White, BarBackgroundColor = Color.FromHex("#009688"), Icon = "check.png" };
+            var navigation = new NavigationPage(page);// { BackgroundColor = Color.FromHex("#009688"), BarTextColor = Color.White, BarBackgroundColor = Color.FromHex("#009688"), Icon = "check.png" };
 
             return navigation;
         }

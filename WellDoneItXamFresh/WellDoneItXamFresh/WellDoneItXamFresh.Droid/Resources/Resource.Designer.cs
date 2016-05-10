@@ -2616,32 +2616,32 @@ namespace WellDoneItXamFresh.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090053
-			public const int abc_background_cache_hint_selector_material_dark = 2131296339;
+			// aapt resource value: 0x7f090056
+			public const int abc_background_cache_hint_selector_material_dark = 2131296342;
 			
-			// aapt resource value: 0x7f090054
-			public const int abc_background_cache_hint_selector_material_light = 2131296340;
+			// aapt resource value: 0x7f090057
+			public const int abc_background_cache_hint_selector_material_light = 2131296343;
 			
-			// aapt resource value: 0x7f090055
-			public const int abc_color_highlight_material = 2131296341;
+			// aapt resource value: 0x7f090058
+			public const int abc_color_highlight_material = 2131296344;
 			
 			// aapt resource value: 0x7f090004
 			public const int abc_input_method_navigation_guard = 2131296260;
 			
-			// aapt resource value: 0x7f090056
-			public const int abc_primary_text_disable_only_material_dark = 2131296342;
-			
-			// aapt resource value: 0x7f090057
-			public const int abc_primary_text_disable_only_material_light = 2131296343;
-			
-			// aapt resource value: 0x7f090058
-			public const int abc_primary_text_material_dark = 2131296344;
-			
 			// aapt resource value: 0x7f090059
-			public const int abc_primary_text_material_light = 2131296345;
+			public const int abc_primary_text_disable_only_material_dark = 2131296345;
 			
 			// aapt resource value: 0x7f09005a
-			public const int abc_search_url_text = 2131296346;
+			public const int abc_primary_text_disable_only_material_light = 2131296346;
+			
+			// aapt resource value: 0x7f09005b
+			public const int abc_primary_text_material_dark = 2131296347;
+			
+			// aapt resource value: 0x7f09005c
+			public const int abc_primary_text_material_light = 2131296348;
+			
+			// aapt resource value: 0x7f09005d
+			public const int abc_search_url_text = 2131296349;
 			
 			// aapt resource value: 0x7f090005
 			public const int abc_search_url_text_normal = 2131296261;
@@ -2652,11 +2652,14 @@ namespace WellDoneItXamFresh.Droid
 			// aapt resource value: 0x7f090007
 			public const int abc_search_url_text_selected = 2131296263;
 			
-			// aapt resource value: 0x7f09005b
-			public const int abc_secondary_text_material_dark = 2131296347;
+			// aapt resource value: 0x7f09005e
+			public const int abc_secondary_text_material_dark = 2131296350;
 			
-			// aapt resource value: 0x7f09005c
-			public const int abc_secondary_text_material_light = 2131296348;
+			// aapt resource value: 0x7f09005f
+			public const int abc_secondary_text_material_light = 2131296351;
+			
+			// aapt resource value: 0x7f090055
+			public const int accent = 2131296341;
 			
 			// aapt resource value: 0x7f090008
 			public const int accent_material_dark = 2131296264;
@@ -2730,8 +2733,8 @@ namespace WellDoneItXamFresh.Droid
 			// aapt resource value: 0x7f090050
 			public const int calendar_text_selected = 2131296336;
 			
-			// aapt resource value: 0x7f09005d
-			public const int calendar_text_selector = 2131296349;
+			// aapt resource value: 0x7f090060
+			public const int calendar_text_selector = 2131296352;
 			
 			// aapt resource value: 0x7f090051
 			public const int calendar_text_unselectable = 2131296337;
@@ -2807,6 +2810,12 @@ namespace WellDoneItXamFresh.Droid
 			
 			// aapt resource value: 0x7f09001f
 			public const int hint_foreground_material_light = 2131296287;
+			
+			// aapt resource value: 0x7f090053
+			public const int material_blue_500 = 2131296339;
+			
+			// aapt resource value: 0x7f090054
+			public const int material_blue_700 = 2131296340;
 			
 			// aapt resource value: 0x7f090020
 			public const int material_blue_grey_800 = 2131296288;
@@ -2892,11 +2901,11 @@ namespace WellDoneItXamFresh.Droid
 			// aapt resource value: 0x7f09003b
 			public const int switch_thumb_disabled_material_light = 2131296315;
 			
-			// aapt resource value: 0x7f09005e
-			public const int switch_thumb_material_dark = 2131296350;
+			// aapt resource value: 0x7f090061
+			public const int switch_thumb_material_dark = 2131296353;
 			
-			// aapt resource value: 0x7f09005f
-			public const int switch_thumb_material_light = 2131296351;
+			// aapt resource value: 0x7f090062
+			public const int switch_thumb_material_light = 2131296354;
 			
 			// aapt resource value: 0x7f09003c
 			public const int switch_thumb_normal_material_dark = 2131296316;
@@ -4809,6 +4818,18 @@ namespace WellDoneItXamFresh.Droid
 			
 			// aapt resource value: 0x7f080006
 			public const int CardView_Light = 2131230726;
+			
+			// aapt resource value: 0x7f080149
+			public const int MyTheme = 2131231049;
+			
+			// aapt resource value: 0x7f08014b
+			public const int MyTheme_ActionBar_TitleTextStyle = 2131231051;
+			
+			// aapt resource value: 0x7f08014a
+			public const int MyTheme_ActionBarStyle = 2131231050;
+			
+			// aapt resource value: 0x7f080148
+			public const int MyTheme_Base = 2131231048;
 			
 			// aapt resource value: 0x7f080016
 			public const int Platform_AppCompat = 2131230742;

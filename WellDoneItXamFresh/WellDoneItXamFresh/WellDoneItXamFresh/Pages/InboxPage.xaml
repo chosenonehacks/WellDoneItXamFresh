@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Name="inboxPage"
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
-             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="Inbox" BackgroundColor="White">
+             x:Class="WellDoneItXamFresh.Pages.InboxPage" Title="Inbox" >
 
   <ContentPage.ToolbarItems>
                  <ToolbarItem Text="Add" 
