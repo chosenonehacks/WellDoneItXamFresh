@@ -91,6 +91,5 @@ C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamF
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\obj\iPhoneSimulator\Debug\optimized\contextm.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\obj\iPhoneSimulator\Debug\optimized\contextm@2x.png
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\obj\iPhoneSimulator\Debug\optimized\contextm@3x.png
-C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\bin\iPhoneSimulator\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\obj\iPhoneSimulator\Debug\WellDoneItXamFreshiOS.exe.mdb
 C:\Users\hal9k\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh.iOS\bin\iPhoneSimulator\Debug\WellDoneItXamFreshiOS.exe.mdb

@@ -35,9 +35,8 @@
                     <ViewCell.ContextActions>
                       <MenuItem Text="Done it" Command="{Binding Source={x:Reference inboxPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
                     </ViewCell.ContextActions>
-                    <!--cardview zamiast content view znalesc sposob na cardview-->
+                    
                     <views:CardContentView CornderRadius="3" >
-                    <!--<ContentView Padding="10,0" >-->
                       
                         <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
                           <ContentView Padding="10,0,10,0">
@@ -48,7 +47,7 @@
                               </StackLayout>
                           </ContentView>
                         </StackLayout>
-                    <!--</ContentView>-->
+                    
                     </views:CardContentView>
                     
                   </ViewCell>
@@ -76,7 +75,9 @@
                       <MenuItem Text="Done it" Command="{Binding Source={x:Reference inboxPage}, Path=BindingContext.CompleteCommand}"  CommandParameter="{Binding .}"/>
                     </ViewCell.ContextActions>
                       <ContentView Padding="10,0" >
-                        <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+                        <StackLayout Orientation="Horizontal" Spacing="0" 
+                                     AbsoluteLayout.LayoutFlags="XProportional" 
+                                     AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
                           <ContentView Padding="10,0,0,0">
                             <StackLayout Spacing="0">
                                 <Label Text="{Binding Title}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />

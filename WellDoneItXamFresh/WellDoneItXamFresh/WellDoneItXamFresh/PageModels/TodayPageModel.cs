@@ -27,8 +27,24 @@ namespace WellDoneItXamFresh.PageModels
             _wellDoneItMobileService = wellDoneItMobileService;
         }
 
-        WellDoneItTask _selectedTask;
+        public Command<WellDoneItTask> CompleteCommand
+        {
+            get
+            {
+                return new Command<WellDoneItTask>(async (task) => {
+                    await CompleteTask(task);
+                });
+            }
+        }
 
+        private async Task CompleteTask(WellDoneItTask task)
+        {
+            task.Complete = true;
+            await _wellDoneItMobileService.UpdateWellDoneItTask(task);
+            await ReloadTasks();
+        }
+
+        WellDoneItTask _selectedTask;
         public WellDoneItTask SelectedTask
         {
             get

@@ -27,6 +27,23 @@ namespace WellDoneItXamFresh.PageModels
             _wellDoneItMobileService = wellDoneItMobileService;
         }
 
+        public Command<WellDoneItTask> CompleteCommand
+        {
+            get
+            {
+                return new Command<WellDoneItTask>(async (task) => {
+                    await CompleteTask(task);
+                });
+            }
+        }
+
+        private async Task CompleteTask(WellDoneItTask task)
+        {
+            task.Complete = true;
+            await _wellDoneItMobileService.UpdateWellDoneItTask(task);
+            await ReloadTasks(SelectedWellDoneItContext);
+        }
+
         public WellDoneItContext SelectedWellDoneItContext { get; set; }
 
         public override void Init(object initData)
