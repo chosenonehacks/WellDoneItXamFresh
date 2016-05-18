@@ -6,6 +6,7 @@ using System.Text;
 using WellDoneIt.Services;
 using WellDoneItXamFresh.Helpers;
 using WellDoneItXamFresh.PageModels;
+using WellDoneItXamFresh.Pages;
 using Xamarin.Forms;
 
 namespace WellDoneItXamFresh
@@ -17,25 +18,26 @@ namespace WellDoneItXamFresh
             FreshIOC.Container.Register<IWellDoneItMobileService, WellDoneItMobileService>();
 
 
-            if (Device.OS == TargetPlatform.iOS)
+            if (Device.OS == TargetPlatform.Android)
             {
+                MainPage = new SplashPage();
+            }
+            else
+            {
+                //var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
+
+                //masterDetailNav.Init("Menu", "menu.png");
+                //masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inboxm.png");
+                //masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "todaym.png");
+                //masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "contextm.png");
+                //masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
+                //MainPage = masterDetailNav;
                 var mainPage = new FreshTabbedNavigationContainer();
 
                 mainPage.AddTab<InboxPageModel>("Inbox", "inboxm.png");
                 mainPage.AddTab<TodayPageModel>("Today", "eventm.png");
                 mainPage.AddTab<ContextListPageModel>("Contexts", "contextm.png");
                 MainPage = mainPage;
-            }
-            else
-            {
-                var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
-
-                masterDetailNav.Init("Menu", "menu.png");
-                masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inboxm.png");
-                masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "todaym.png");
-                masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "contextm.png");
-                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
-                MainPage = masterDetailNav;
             }
 
         }

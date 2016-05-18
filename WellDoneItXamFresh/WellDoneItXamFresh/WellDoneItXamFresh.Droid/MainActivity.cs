@@ -10,7 +10,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace WellDoneItXamFresh.Droid
 {
-    [Activity(Label = "Well Done It", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Done It", Icon = "@drawable/ic_launcher", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)

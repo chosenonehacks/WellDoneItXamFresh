@@ -3519,49 +3519,49 @@ namespace WellDoneItXamFresh.Droid
 			public const int ic_cast_on_light = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int ic_media_pause = 2130837584;
+			public const int ic_launcher = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ic_media_play = 2130837585;
+			public const int ic_media_pause = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_media_route_disabled_mono_dark = 2130837586;
+			public const int ic_media_play = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_media_route_off_mono_dark = 2130837587;
+			public const int ic_media_route_disabled_mono_dark = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_media_route_on_0_mono_dark = 2130837588;
+			public const int ic_media_route_off_mono_dark = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int ic_media_route_on_1_mono_dark = 2130837589;
+			public const int ic_media_route_on_0_mono_dark = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int ic_media_route_on_2_mono_dark = 2130837590;
+			public const int ic_media_route_on_1_mono_dark = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int ic_media_route_on_mono_dark = 2130837591;
+			public const int ic_media_route_on_2_mono_dark = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int ic_pause_dark = 2130837592;
+			public const int ic_media_route_on_mono_dark = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int ic_pause_light = 2130837593;
+			public const int ic_pause_dark = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int ic_play_dark = 2130837594;
+			public const int ic_pause_light = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_play_light = 2130837595;
+			public const int ic_play_dark = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_setting_dark = 2130837596;
+			public const int ic_play_light = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_setting_light = 2130837597;
+			public const int ic_setting_dark = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int icon = 2130837598;
+			public const int ic_setting_light = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
 			public const int inbox = 2130837599;
@@ -3608,8 +3608,8 @@ namespace WellDoneItXamFresh.Droid
 			// aapt resource value: 0x7f02006d
 			public const int mr_ic_settings_light = 2130837613;
 			
-			// aapt resource value: 0x7f020073
-			public const int notification_template_icon_bg = 2130837619;
+			// aapt resource value: 0x7f020074
+			public const int notification_template_icon_bg = 2130837620;
 			
 			// aapt resource value: 0x7f02006e
 			public const int plus = 2130837614;
@@ -3621,10 +3621,13 @@ namespace WellDoneItXamFresh.Droid
 			public const int settingsm = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int today = 2130837617;
+			public const int splash = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int todaym = 2130837618;
+			public const int today = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int todaym = 2130837619;
 			
 			static Drawable()
 			{
