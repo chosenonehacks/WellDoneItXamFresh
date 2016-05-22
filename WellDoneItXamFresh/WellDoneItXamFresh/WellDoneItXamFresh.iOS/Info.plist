@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>WellDoneItXamFresh</string>
+	<string>Done It</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.yourcompany.WellDoneItXamFresh</string>
 	<key>CFBundleVersion</key>

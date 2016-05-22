@@ -25,8 +25,6 @@ namespace WellDoneItXamFresh.Droid
             //removes Application Icon from toolbar
             this.ActionBar.SetIcon(Android.Resource.Color.Transparent);
 
-            
-
             LoadApplication(new App());
         }
     }

@@ -85,6 +85,7 @@
     <Compile Include="Services\WellDoneItMobileService.cs" />
     <Compile Include="Views\CardContentView.cs" />
     <Compile Include="Views\FloatingActionButtonView.cs" />
+    <Compile Include="Views\PortraitOrientationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

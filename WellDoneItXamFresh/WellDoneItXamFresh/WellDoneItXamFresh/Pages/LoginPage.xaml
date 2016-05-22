@@ -1,34 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<views:PortraitOrientationPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:WellDoneItXamFresh.Converters;assembly=WellDoneItXamFresh"
-             x:Class="WellDoneItXamFresh.Pages.LoginPage" Title="Login"  >
+             xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
+             x:Class="WellDoneItXamFresh.Pages.LoginPage" Title="Login to Done it"   >
 
   <ContentPage.Resources>
     <ResourceDictionary>
       <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition/>
-      <RowDefinition/>
-    </Grid.RowDefinitions>
-  <StackLayout  Grid.Row="1" Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible}" >    
-    <Label Text="Login with" VerticalOptions="Center" HorizontalOptions="Center" />
-    <Button Text="Facebook" Command="{Binding LoginCommand}" CommandParameter="facebook"/>
-    <Button Text="Twitter" Command="{Binding LoginCommand}" CommandParameter="twitter"/>
-    <Button Text="Google" Command="{Binding LoginCommand}" CommandParameter="google"/>
-  </StackLayout>  
+  <ContentPage.Content>
+    
+  
+    <RelativeLayout>
+      <RelativeLayout.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:Double" iOS="0.75" Android="1" x:Key="XFactor" />
+            <OnPlatform x:TypeArguments="x:Double" iOS="1" Android="0.5" x:Key="YFactor" />
+        </ResourceDictionary>
+    </RelativeLayout.Resources>
+        
+                <Image Source="logo.png" 
+                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToView,ElementName=ButtonGrid, Property=X, Factor={StaticResource XFactor}}"
+                RelativeLayout.YConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Y, Factor={StaticResource YFactor}}" />
+        
+    <Grid x:Name="ButtonGrid"
+          RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5}"
+          RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" 
+          
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height, Factor=0.5, Constant=0}"
+          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.25}">
       
-  <StackLayout Grid.Row="1" Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseBooleanConverter}}">
-    <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />
-    <Button Text="Go back to your tasks" Command="{Binding CloseLoginCommand}"/>
-    <Button Text="Logout" Command="{Binding LogoutCommand}"/>
-  </StackLayout>
-  
-  
-</Grid>
-  
-  
-</ContentPage>
+          <StackLayout   Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible}" >
+              <Label Text="Login with" VerticalOptions="Center" HorizontalOptions="Center"/>
+              <Button BackgroundColor="#3b5998"  Text="Facebook" Command="{Binding LoginCommand}" CommandParameter="facebook"/>
+              <Button BackgroundColor="#55acee"  Text="Twitter" Command="{Binding LoginCommand}" CommandParameter="twitter"/>
+              <Button BackgroundColor="#dd4b39"  Text="Google" Command="{Binding LoginCommand}" CommandParameter="google"/>
+          </StackLayout>
+      
+          <StackLayout Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseBooleanConverter}}">
+            <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Button BackgroundColor="#FF5722" Text="Go to your tasks" Command="{Binding CloseLoginCommand}"/>
+          </StackLayout>
+    
+        </Grid>
+        </RelativeLayout>
+    
+ </ContentPage.Content> 
+ 
+</views:PortraitOrientationPage>

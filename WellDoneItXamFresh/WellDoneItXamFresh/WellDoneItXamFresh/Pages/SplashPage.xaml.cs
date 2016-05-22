@@ -25,9 +25,7 @@ namespace WellDoneItXamFresh.Pages
 
                 // delay for a few seconds on the splash screen
                 await Task.Delay(3000);
-
-                // instantiate a NavigationPage with the AcquaintanceListPage
-                //var navPage = new NavigationPage(new AcquaintanceListPage() { Title = "Acquaintances", BindingContext = new AcquaintanceListViewModel() });
+                
                 var masterDetailNav = new ThemedMasterDetailNavigationContainer(); // FreshMasterDetailNavigationContainer();
 
                 masterDetailNav.Init("Menu", "menu.png");
@@ -35,11 +33,7 @@ namespace WellDoneItXamFresh.Pages
                 masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "todaym.png");
                 masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "contextm.png");
                 masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
-                //MainPage = masterDetailNav;
-
-                // if this is iOS set the nav bar text color
-                //if (Device.OS == TargetPlatform.iOS)
-                //    masterDetailNav.BarTextColor = Color.White;
+                
 
                 // on the main UI thread, set the MainPage to the navPage
                 Device.BeginInvokeOnMainThread(() => {
