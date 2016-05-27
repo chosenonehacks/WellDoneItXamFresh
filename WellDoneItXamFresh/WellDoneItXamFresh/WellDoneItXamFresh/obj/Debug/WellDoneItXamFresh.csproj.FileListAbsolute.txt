@@ -47,5 +47,8 @@ C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\Wel
 C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.ContextPage.xaml.g.cs
 C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.dll
 C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.pdb
+C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.Pages.SplashPage.xaml.g.cs
+C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.dll.mdb
+C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\bin\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\obj\Debug\WellDoneItXamFresh.dll.mdb
 C:\Users\Tomasz.Wybraniec\Source\Repos\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\WellDoneItXamFresh\bin\Debug\WellDoneItXamFresh.dll.mdb

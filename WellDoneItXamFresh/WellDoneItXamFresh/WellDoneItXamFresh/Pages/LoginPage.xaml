@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:WellDoneItXamFresh.Converters;assembly=WellDoneItXamFresh"
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="WellDoneItXamFresh.Pages.LoginPage" Title="Login to Done it"   >
 
   <ContentPage.Resources>
@@ -37,9 +38,10 @@
       
           <StackLayout   Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible}" >
               <Label Text="Login with" VerticalOptions="Center" HorizontalOptions="Center"/>
-              <Button BackgroundColor="#3b5998"  Text="Facebook" Command="{Binding LoginCommand}" CommandParameter="facebook"/>
-              <Button BackgroundColor="#55acee"  Text="Twitter" Command="{Binding LoginCommand}" CommandParameter="twitter"/>
-              <Button BackgroundColor="#dd4b39"  Text="Google" Command="{Binding LoginCommand}" CommandParameter="google"/>
+            
+              <controls:ImageButton Text="Facebook" BackgroundColor="#3b5998" TextColor="#ffffff" Command="{Binding LoginCommand}" CommandParameter="facebook" Image="Facebook.png" Orientation="ImageToLeft"  />
+              <controls:ImageButton Text="Twitter" BackgroundColor="#55acee" TextColor="#ffffff" Command="{Binding LoginCommand}" CommandParameter="facebook" Image="twitter.png" Orientation="ImageToLeft"  />  
+              <controls:ImageButton Text="Google" BackgroundColor="#dd4b39" TextColor="#ffffff" Command="{Binding LoginCommand}" CommandParameter="facebook" Image="google.png" Orientation="ImageToLeft"  />              
           </StackLayout>
       
           <StackLayout Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseBooleanConverter}}">
