@@ -7,12 +7,7 @@
              xmlns:views="clr-namespace:WellDoneItXamFresh.Views;assembly=WellDoneItXamFresh"
              Title="{Binding PageTitle}">
 
-  <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Save"
-    Icon="save.png"
-    Command="{Binding SaveTaskSaveCommand}"
-    Order="Primary"/>
-  </ContentPage.ToolbarItems>
+  
 
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -71,7 +66,7 @@
                 <TableView Intent="Form" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                   <TableRoot>
                     <TableSection Title="Task title">
-                      <EntryCell Text="{Binding WellDoneItTask.Title}" Keyboard="Text" />
+                      <EntryCell Label="Title" Text="{Binding WellDoneItTask.Title}" Keyboard="Text" />
                     </TableSection>
                     <TableSection Title="Due date">
                       <ViewCell>
@@ -95,13 +90,10 @@
                     </TableSection>
                     <TableSection >
                       <ViewCell >
-                        <ContentView Padding="0,0" IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}" IsVisible="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}">
-                          <ContentView.Padding>
-                            <OnPlatform x:TypeArguments="Thickness" iOS="10,0" />
-                          </ContentView.Padding>
+                        <ContentView Padding="10,0" >
                           <ContentView.Content>
                             <StackLayout>
-                              <Button BackgroundColor="#fd6d6d" Text="Delete this task" TextColor="White" Command="{Binding DeleteTaskCommand}" />
+                              <Button BackgroundColor="#5cb85c" Text="Save this task" TextColor="White" Command="{Binding SaveTaskSaveCommand}" />
                             </StackLayout>
                           </ContentView.Content>
                         </ContentView>
