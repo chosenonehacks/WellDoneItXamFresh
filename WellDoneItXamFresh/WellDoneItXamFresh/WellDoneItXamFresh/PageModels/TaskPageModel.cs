@@ -21,7 +21,7 @@ namespace WellDoneItXamFresh.PageModels
     {
         private readonly IWellDoneItMobileService _wellDoneItMobileService;
         
-        private bool isNewTask { get; set; }
+        public bool isNewTask { get; set; }
 
         public TaskPageModel(IWellDoneItMobileService wellDoneItMobileService)
         {
@@ -46,6 +46,13 @@ namespace WellDoneItXamFresh.PageModels
             set { _wellDoneItTask = value; }
         }
 
+        private string _pageTitle;
+        public string PageTitle
+        {
+            get { return _pageTitle; }
+            set { _pageTitle = value; }
+        }
+
         public override void Init(object initData)
         {
             ReloadContexts();
@@ -54,15 +61,16 @@ namespace WellDoneItXamFresh.PageModels
             {
                 WellDoneItTask = initData as WellDoneItTask;
                 SelectedContext = WellDoneItContextList.FirstOrDefault(c => c.Name == WellDoneItTask.Context);
-                
+
+                PageTitle = "Edit task";
             }
             else
             {
                 WellDoneItTask = new WellDoneItTask();
-                WellDoneItTask.Title = "Name your task";
+                //WellDoneItTask.Title = "Name your task";
                 WellDoneItTask.DateUtc = DateTime.Today;
-                //WellDoneItTask.Context = WellDoneItContextList.FirstOrDefault().Name;
-                //SelectedContext.Name = WellDoneItTask.Context;
+
+                PageTitle = "Add new task";
 
                 isNewTask = true;
             }
@@ -141,20 +149,54 @@ namespace WellDoneItXamFresh.PageModels
 
         #endregion
 
-        public Command SaveCommand
+        public Command SaveTaskSaveCommand
         {
             get
             {
                 return new Command(async () => {
-                    await TaskOperationAsync(WellDoneItTask);
+                    await SaveTaskAsync();
                 }
                 );
             }
         }
 
+        public Command DeleteTaskCommand
+        {
+            get
+            {
+                return new Command(async () => {
+                    await DeleteTaskAsync();
+                }
+                );
+            }
+        }
+
+        private async Task DeleteTaskAsync()
+        {
+            if (IsBusy)
+                return;
+
+            try
+            {
+                IsBusy = true;
+                await _wellDoneItMobileService.DeleteWellDoneItTask(WellDoneItTask);
+
+                await CoreMethods.PopPageModel();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("OH NO!" + ex);
+                await CoreMethods.DisplayAlert("Alert", "Unable to delete task", "ok");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
         public bool IsBusy { get; set; }
 
-        private async Task TaskOperationAsync(WellDoneItTask wellDoneItTask)
+        private async Task SaveTaskAsync()
         {
             if (IsBusy)
                 return;
@@ -163,26 +205,29 @@ namespace WellDoneItXamFresh.PageModels
 
                 IsBusy = true;
                 if(SelectedContext != null)
-                wellDoneItTask.Context = SelectedContext.Name;
+                WellDoneItTask.Context = SelectedContext.Name;
+
+                if (WellDoneItTask.UserId == null)
+                    WellDoneItTask.UserId = _wellDoneItMobileService.MobileService.CurrentUser.UserId;
 
                 if (isNewTask)
                 {
 
-                    await _wellDoneItMobileService.AddWellDoneItTask(wellDoneItTask);
+                    await _wellDoneItMobileService.AddWellDoneItTask(WellDoneItTask);
 
                 }
                 else
                 {
-                    await _wellDoneItMobileService.UpdateWellDoneItTask(wellDoneItTask);
+                    await _wellDoneItMobileService.UpdateWellDoneItTask(WellDoneItTask);
 
                 }
 
-                await CoreMethods.PopPageModel(wellDoneItTask);
+                await CoreMethods.PopPageModel(WellDoneItTask);
             }
             catch(Exception ex)
             {
                 Debug.WriteLine("OH NO!" + ex);
-                await CoreMethods.DisplayAlert("Alert", "Unable to sync tasks, you may be offline", "ok");
+                await CoreMethods.DisplayAlert("Alert", "Unable to sync tasks", "ok");
             }
             finally
             {

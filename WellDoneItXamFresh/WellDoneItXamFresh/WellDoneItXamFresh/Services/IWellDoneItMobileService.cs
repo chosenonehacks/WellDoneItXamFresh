@@ -16,6 +16,8 @@ namespace WellDoneIt.Services
 
         Task AddWellDoneItTask(WellDoneItTask task);
 
+        Task DeleteWellDoneItTask(WellDoneItTask task);
+
         Task AddWellDoneItContext(WellDoneItContext context);
 
         Task InsertInitContexts();

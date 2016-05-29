@@ -136,7 +136,7 @@ namespace WellDoneItXamFresh.PageModels
         }
 
         // Methods are automatically wired up to page
-        protected async override void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override async void ViewIsAppearing(object sender, System.EventArgs e)
         {            
             await ReloadTasks();
 

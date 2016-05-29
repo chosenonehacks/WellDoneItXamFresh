@@ -110,6 +110,15 @@ namespace WellDoneIt.Services
             await SyncTasks();
         }
 
+        public async Task DeleteWellDoneItTask(WellDoneItTask task)
+        {
+            await Initialize();
+
+            await _wellDoneItTaskSyncTable.DeleteAsync(task);
+
+            await SyncTasks();
+        }
+
         //Used only once to populate standard contexts
         public async Task InsertInitContexts()
         {
@@ -157,7 +166,7 @@ namespace WellDoneIt.Services
             {
                 //pull down all latest changes and then push current tasks up
                 await _wellDoneItTaskSyncTable.PullAsync("allTasks", _wellDoneItTaskSyncTable.CreateQuery());
-                
+
                 await MobileService.SyncContext.PushAsync();
             }
             catch (Exception ex)
