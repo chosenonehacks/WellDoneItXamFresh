@@ -19,7 +19,7 @@ namespace WellDoneItXamFresh.Pages
             if (Device.OS == TargetPlatform.Android)
 			{
                 fabsav.Clicked = AndroidAddButtonClicked;
-                fabdel.Clicked = DeleteAddButtonClicked;
+                //fabdel.Clicked = DeleteAddButtonClicked;
             }
         }
 
@@ -33,14 +33,14 @@ namespace WellDoneItXamFresh.Pages
             //taskPageModel?.CoreMethods.PopPageModel();
         }
 
-        void DeleteAddButtonClicked(object sender, EventArgs e)
-        {
-            var taskPageModel = this.BindingContext as TaskPageModel;
-            
-
-            taskPageModel?.DeleteTaskCommand.Execute(taskPageModel.WellDoneItTask);
-
-            //taskPageModel?.CoreMethods.PopPageModel();
-        }
+//        void DeleteAddButtonClicked(object sender, EventArgs e)
+//        {
+//            var taskPageModel = this.BindingContext as TaskPageModel;
+//            
+//
+//            taskPageModel?.DeleteTaskCommand.Execute(taskPageModel.WellDoneItTask);
+//
+//            //taskPageModel?.CoreMethods.PopPageModel();
+//        }
     }
 }

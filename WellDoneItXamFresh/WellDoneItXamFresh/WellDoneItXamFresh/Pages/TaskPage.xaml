@@ -53,7 +53,7 @@
                     </TableSection>
                   </TableRoot>
                 </TableView>
-                <views:FloatingActionButtonView x:Name="fabdel" ImageName="fab_add" ColorNormal="#FF5252" ColorPressed="#E02828" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 0.70, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}" IsVisible="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}"/>
+<!--                <views:FloatingActionButtonView x:Name="fabdel" ImageName="fab_add" ColorNormal="#FF5252" ColorPressed="#E02828" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 0.70, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}" IsVisible="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}"/>-->
                 <views:FloatingActionButtonView x:Name="fabsav" ImageName="save" ColorNormal="#FF5722" ColorPressed="#E64A19" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
               </AbsoluteLayout.Children>
             </AbsoluteLayout>
