@@ -134,8 +134,15 @@ namespace WellDoneItXamFresh.PageModels
 
         
 
-        protected override void ViewIsAppearing(object sender, System.EventArgs e)
+        protected override async void ViewIsAppearing(object sender, System.EventArgs e)
         {
+			if (!Settings.IsLoggedIn)
+			{
+				await CoreMethods.PushPageModel<LoginPageModel>(null, false);
+
+				return;
+			}
+
             ReloadContexts();
 
             base.ViewIsAppearing(sender, e);

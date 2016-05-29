@@ -5,10 +5,10 @@
              x:Name="contexListPage"
              x:Class="WellDoneItXamFresh.Pages.ContextListPage" Title="Contexts" >
   <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Settings"
+<!--    <ToolbarItem Text="Settings"
                  Icon="settings.png"
                  Command="{Binding SettingsCommand}"
-                 Order="Primary"/>
+                 Order="Primary"/>-->
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     

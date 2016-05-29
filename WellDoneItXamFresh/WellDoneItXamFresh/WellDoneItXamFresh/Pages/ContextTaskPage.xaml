@@ -9,10 +9,10 @@
                  Icon="plus.png"
                  Command="{Binding AddNewTaskCommand}"
                  Order="Primary"/>
-    <ToolbarItem Text="Settings"
+<!--    <ToolbarItem Text="Settings"
                  Icon="settings.png"
                  Command="{Binding SettingsCommand}"
-                 Order="Primary"/>
+                 Order="Primary"/>-->
   </ContentPage.ToolbarItems>
 
   <ContentPage.Content>    

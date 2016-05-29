@@ -44,8 +44,8 @@
       </StackLayout>
       
           <StackLayout Orientation="Vertical" IsVisible="{Binding IsLogedInPanelVisible, Converter={StaticResource InverseBooleanConverter}}">
-            <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />
-            <Button BackgroundColor="#FF5722" Text="Go to your tasks" Command="{Binding CloseLoginCommand}"/>
+<!--            <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+            <Button BackgroundColor="#FF5722" Text="Go to your tasks" TextColor="#ffffff" Command="{Binding CloseLoginCommand}"/>
           </StackLayout>
     
         </Grid>

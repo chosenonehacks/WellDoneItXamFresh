@@ -102,13 +102,12 @@ namespace WellDoneItXamFresh.PageModels
 
             try
             {
+				if (!Settings.IsLoggedIn)
+				{
+					await CoreMethods.PushPageModel<LoginPageModel>(null, false);
 
-                if (!Settings.IsLoggedIn)
-                {
-                    await CoreMethods.PushPageModel<LoginPageModel>(null, false);
-                    
-                    return;
-                }
+					return;
+				}
 
                 await _wellDoneItMobileService.Initialize();
 
@@ -135,6 +134,7 @@ namespace WellDoneItXamFresh.PageModels
         // Methods are automatically wired up to page
         protected async override void ViewIsAppearing(object sender, System.EventArgs e)
         {
+			
             await ReloadTasks();
 
             base.ViewIsAppearing(sender, e);
