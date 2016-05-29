@@ -20,12 +20,6 @@
     </ResourceDictionary>
   </ContentPage.Resources>
 
-  <!--<ContentPage.Content>
-  <OnPlatform x:TypeArguments="View">
-
-    <OnPlatform.Android>
-
-      <AbsoluteLayout>-->
 
   <ContentPage.Content>
 
@@ -77,7 +71,7 @@
                 <TableView Intent="Form" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                   <TableRoot>
                     <TableSection Title="Task title">
-                      <EntryCell Label="Title" Text="{Binding WellDoneItTask.Title}" Keyboard="Text" />
+                      <EntryCell Text="{Binding WellDoneItTask.Title}" Keyboard="Text" />
                     </TableSection>
                     <TableSection Title="Due date">
                       <ViewCell>
@@ -90,7 +84,7 @@
                       </ViewCell>
                     </TableSection>
                     <TableSection >
-                      <ViewCell IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}">
+                      <ViewCell >
                         <ContentView Padding="0,0" IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}" HorizontalOptions="Start" IsVisible="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}">
                           <StackLayout Orientation="Horizontal">
                             <Label Text="Complete task" TextColor="Gray" HorizontalOptions="Start"/>
@@ -100,10 +94,10 @@
                       </ViewCell>
                     </TableSection>
                     <TableSection >
-                      <ViewCell IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}">
+                      <ViewCell >
                         <ContentView Padding="0,0" IsEnabled="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}" IsVisible="{Binding isNewTask, Converter={StaticResource InverseBooleanConverter}}">
                           <ContentView.Padding>
-                            <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0" />
+                            <OnPlatform x:TypeArguments="Thickness" iOS="10,0" />
                           </ContentView.Padding>
                           <ContentView.Content>
                             <StackLayout>
