@@ -22,7 +22,7 @@
         <Label Text="Logged as: "/>
         <Label Text="{Binding MobileServiceLoggedUserName}" VerticalOptions="Center" HorizontalOptions="Center" />
       </StackLayout>
-      <Button Text="Logout from app" Command="{Binding LogoutCommand}"/>
+<!--      <Button Text="Logout from app" Command="{Binding LogoutCommand}"/>-->
     </StackLayout>
 
     

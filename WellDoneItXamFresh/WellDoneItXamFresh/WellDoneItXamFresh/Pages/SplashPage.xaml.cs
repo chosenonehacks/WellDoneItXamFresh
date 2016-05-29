@@ -32,7 +32,8 @@ namespace WellDoneItXamFresh.Pages
                 masterDetailNav.AddPageWithIcon<InboxPageModel>("Inbox", "inboxm.png");
                 masterDetailNav.AddPageWithIcon<TodayPageModel>("Today", "todaym.png");
                 masterDetailNav.AddPageWithIcon<ContextListPageModel>("Contexts", "contextm.png");
-                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
+				//temp switch settings off as not much there anyway
+//                masterDetailNav.AddPageWithIcon<SettingsPageModel>("Settings", "settingsm.png");
                 
 
                 // on the main UI thread, set the MainPage to the navPage
