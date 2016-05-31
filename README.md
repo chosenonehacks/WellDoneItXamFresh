@@ -6,7 +6,7 @@ Application to manage everyday tasks with little ideas borrowed from GTD methodo
 
 This app was created as a project for contest "Daj sie poznać 2016" organized by Maciej Aniserowicz
 
-Actual list of posts that were written for that contest: http://programuje.net/lista-postow-konkurs-daj-sie-poznac-2016/
+Actual list of posts that were written for that contest (posts are in Polish): http://programuje.net/lista-postow-konkurs-daj-sie-poznac-2016/
 
 	
 ### Roadmap:
