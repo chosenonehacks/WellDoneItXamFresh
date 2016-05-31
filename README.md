@@ -7,15 +7,15 @@ This app was created as a project for contest "Daj sie poznać 2016" organized b
 Actual list of posts that were written for that contest: http://programuje.net/lista-postow-konkurs-daj-sie-poznac-2016/
 
 	
-###Roadmap:
+### Roadmap:
 * v1
 	* [x] working lists and context
 	* [x] azure backend
 	* [x] login by social media providers
 	
 * v1.1
-	* [] unit tests (xUnit)
-	* [] refactoring
+	* [ ] unit tests (xUnit)
+	* [ ] refactoring
 
 
 ### Created with
